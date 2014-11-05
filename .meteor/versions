@@ -8,6 +8,7 @@ blaze@2.0.3
 boilerplate-generator@1.0.1
 callback-hook@1.0.1
 check@1.0.2
+coffeescript@1.0.4
 ctl-helper@1.0.4
 ctl@1.0.2
 ddp@1.0.11
@@ -29,6 +30,7 @@ iron:location@1.0.0
 iron:middleware-stack@1.0.0
 iron:router@1.0.0
 iron:url@1.0.0
+joshowens:simple-form@0.2.0
 jquery@1.0.1
 json@1.0.1
 launch-screen@1.0.0
@@ -41,6 +43,8 @@ minimongo@1.0.5
 mizzao:bootstrap-3@3.3.0
 mobile-status-bar@1.0.1
 mongo@1.0.8
+mrt:mailchimp@0.4.0
+mrt:underscore-string-latest@2.3.3
 natestrauser:font-awesome@4.2.0
 observe-sequence@1.0.3
 ordered-dict@1.0.1
