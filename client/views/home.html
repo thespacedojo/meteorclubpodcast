@@ -1,0 +1,119 @@
+<template name="home">
+	<div class="email-capture">
+	<div class="container">
+		<div class="row">
+			<div class="hidden-xs hidden-sm col-md-4 col-lg-4">
+				<img id="avatar" src="/images/meteor_circle2.png"/>
+			</div>
+			<div class="col-sm-12 col-md-8 col-lg-8 capture-content">
+				<h1>Get the best tips and tricks for Meteor.js delivered weekly to your inbox.</h1>
+
+				<form class="form subscribe-form" role="form">
+					<div class="row">
+						<div class="form-group col-xs-12 col-md-12 col-lg-6">
+							<label class="sr-only" for="exampleInputEmail2">Email address</label>
+							<input type="email" class="form-control" id="inputEmail" placeholder="email address">
+						</div>
+						<div class="form-group col-xs-12 col-md-12 col-lg-6">
+							<label class="sr-only" for="exampleInputPassword2">Password</label>
+							<input type="name" class="form-control" id="inputName" placeholder="name">
+						</div>
+					</div>
+					<div class="row">
+						<div class="radio col-xs-6 col-md-4 col-lg-4">
+						  <div class="radio-question">
+						  	<label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+							    <span>I'm an advanced Meteor.js developer.</span>
+							  </label>
+						  </div>
+						</div>
+						<div class="radio col-xs-6 col-md-5 col-lg-4">
+						  <div class="radio-question">
+						  	<label>
+							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+							    <span>Actually, I'm just starting out with Meteor.</span>
+							  </label>
+						  </div>
+						</div>
+						<div class="col-xs-12 col-md-3 col-lg-4">
+							<button type="submit" class="btn btn-primary btn-block">subscribe</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="club-info">
+	<div class="container">
+		<div class="row title">
+			<div class="col-md-8">
+				<h1>Other Resources</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<a href="http://meteorpodcast.com" target="_blank" class="resource">
+				<div class="row">
+					<div class="col-xs-2 col-sm-2 col-md-2 icon">
+						<i class="fa fa-4x fa-headphones"></i>
+					</div>
+					<div class="col-xs-10 col-sm-10 col-md-10">
+						<h3>Meteor Podcast</h3>
+						<p class="clean">A weekly news show that talks about all things happening in the Meteor.js universe.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<a href="{{pathFor 'learn'}}" class="resource">
+				<div class="row">
+					<div class="col-xs-2 col-sm-2 col-md-2 icon">
+						<i class="fa fa-4x fa-code"></i>
+					</div>
+					<div class="col-xs-10 col-sm-10 col-md-10">
+						<h3>Mastering Meteor.js Class</h3>
+						<p class="clean">Curious about Meteor? Tired of dabbling with this hot new technology and ready to dive deep? Learn how to build Meteor.js apps from scratch.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<!-- <a href="{{pathFor 'questions'}}" class="resource"> -->
+				<a href="https://www.youtube.com/watch?v=LqWbXQDXHC0" target="_blank" class="resource">
+				<div class="row">
+					<div class="col-xs-2 col-sm-2 col-md-2 icon">
+						<i class="fa fa-4x fa-youtube-play"></i>
+					</div>
+
+					<div class="col-xs-10 col-sm-10 col-md-10">
+						<h3>Meteor Club Q&amp;A</h3>
+						<p class="clean">Tune in every month with expert Josh Owens and special guests to learn about all things Meteor.js.</p>
+					</div>
+				</div>
+				</a>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<a href="http://www.testingmeteor.com" target="_blank" class="resource">
+				<div class="row">
+					<div class="col-xs-2 col-sm-2 col-md-2 icon">
+						<i class="fa fa-4x fa-book"></i>
+					</div>
+
+					<div class="col-xs-10 col-sm-10 col-md-10">
+						<h3>Testing with Meteor</h3>
+						<p class="clean">Automated testing is an important part of building robust web apps. Learn how to integrate testing into your Meteor.js coding practices.</p>
+					</div> 
+				</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	</div>
+</template>

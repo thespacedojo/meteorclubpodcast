@@ -1,0 +1,582 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,400italic,300italic")
+
+roboto "Roboto", sans-serif
+
+*
+  margin 0
+  padding 0
+
+html, body
+  height 100%
+
+body
+  -webkit-font-smoothing antialiased
+  text-rendering optimizeLegibility
+
+.wrapper
+  min-height 100%
+  height auto !important
+  height 100%
+  margin 0 auto -2em
+  padding 0
+
+footer, .push
+  height 2em
+
+
+/* todo fix header html, because that's not a header! */
+#header
+  border-bottom 1px solid #eee
+  margin-bottom 40px
+  padding-bottom 40px
+  text-align center
+  position relative
+
+.index
+  margin-top 100px
+
+.navbar
+  background-color #fff
+  font-family roboto
+  text-transform lowercase
+  font-weight 700
+  border-radius 0
+  margin-bottom 0
+
+.navbar, .navbar-default
+  height 80px
+
+  li a
+    color #bbb
+    margin 0 !important
+    padding 8px 20px
+    border-radius 20px
+    margin 14px 15px 0 !important
+    font-size 14px
+
+    &:hover
+      background-color #f2f2f2 !important
+      transition background .1s, color .1s ease-in-out
+      color #111
+
+.navbar-brand img
+  height 41px
+
+.email-capture
+  margin 0 0 20px 0
+  height 500px
+  // background lighten(#232438, 2%) 
+  // background-image url('../images/bg-test1.png')
+  background-image url('../images/bg-test3.jpg')
+  background-size cover
+  background-position 0 50%
+  padding 30px 0
+
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (min-width 768px)
+    height 500px
+    padding 45px 0
+
+
+  /* Medium devices (desktops, 992px and up) */
+  @media screen and (min-width 992px)
+    height 470px 
+    padding 80px 0
+
+
+  /* Large devices (large desktops, 1200px and up) */
+  @media screen and (min-width 1200px)
+    height 500px 
+    padding 80px 0
+
+
+  h1
+    font-size 28px
+    color white
+
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width 768px)
+      font-size 32px
+  
+
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width 992px)
+      font-size 32px
+  
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width 1200px)
+      font-size 40px
+
+  p
+    color darken(white, 25%)
+
+
+  .capture-content
+    margin 0
+
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width 992px)
+      margin 0
+  
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width 1200px)
+      margin 20px 0
+
+  .form-control
+    padding 24px 15px
+    font-size 20px
+    font-family roboto
+
+
+  .btn
+    font-family roboto
+    font-size 20px
+    padding 11px 20px
+    font-weight 700
+    letter-spacing 1px
+
+    &.btn-primary
+      background-color darken(#a685bd, 5%)
+      border 0
+      margin-top 3px
+
+      &:hover
+        background-color darken(#a685bd, 15%) 
+        transition background .1s ease-in-out
+
+  .subscribe-form
+    margin-top 20px
+
+    input
+      background-color #1d1f2d
+      border none
+
+    .radio
+      margin-top 3px
+      font-size 14px
+      font-family roboto
+      color white
+
+      input[type=radio]
+        margin-top 12px
+        padding-right 10px
+        color white
+    
+
+      .radio-question
+        margin 0
+        width 100%
+        padding 6px 10px 5px
+        border-radius 5px
+        display inline-block
+        min-height 50px 
+
+        span
+          display inline-block
+          margin 10px 0 0 5px
+          line-height 1.2 
+
+          /* Medium devices (desktops, 992px and up) */
+          @media screen and (min-width 992px)
+            margin 3px 0 0 5px
+        
+        &:hover
+          opacity .6
+          transition opacity .2s ease-in-out 
+      
+    
+.club-info
+  margin 30px auto 70px
+
+  .title
+    margin-bottom 30px !important
+    h1
+      text-transform lowercase
+  
+  i
+    font-size 48px
+    position relative
+    top 4px
+    opacity .3
+    color #232438
+
+  h3
+    margin-top 0
+
+  .row
+    margin-bottom 0
+
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width 992px)
+      margin-bottom 50px
+  
+
+    &:last-child
+      margin-bottom 0
+  
+  a.resource
+    border-radius 10px
+    display block
+    padding 20px 10px
+    &:hover
+      background-color #f2f2f2
+      transition background .2s ease-in-out
+  
+    h3
+      color #333
+  
+    p
+      color #555
+  
+    .icon
+      text-align center
+  
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width 992px)
+      padding 30px 20px
+  
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-family "Roboto", sans-serif
+
+  &.clean
+    margin 0 !important
+
+h1
+  color #333
+  line-height 1.3
+  font-size 32px
+  font-weight 700
+
+p
+  line-height 1.75
+  font-family "Roboto", sans-serif
+  font-size 16px
+  color #555
+  margin-top 20px
+
+  &.clean
+    margin 0
+
+ul
+  line-height 1.75
+  font-family "Roboto", sans-serif
+  font-size 16px
+  color #555
+  margin 20px 0 0 40px
+
+  li
+    margin 10px 0
+
+
+#wrapper
+  padding 0 40px 0 40px
+  max-width 700px
+  margin 0 auto
+#avatar
+  display inline-block
+  width 90%
+  height auto
+  margin 0 0 40px 0
+
+.learn, .about
+  .section
+    margin-top 80px
+
+    &.whoami
+      border-top 1px solid #ddd
+      border-bottom 1px solid #ddd
+      padding 50px 0 70px
+  
+    &.testimonials
+      border-top 1px solid #ddd
+      border-bottom 1px solid #ddd
+      padding 30px 0 70px
+  
+
+    &.small-margin
+      margin-top 30px
+  
+
+    &:first-child
+      margin-top 60px
+  
+
+    strong
+      font-weight 700
+
+      &.love
+        color red
+    p
+      font-size 18px
+  
+
+    .well
+      margin 40px 0
+      background-color #232438 !important
+      border none !important
+
+      p
+        margin 0
+        color white !important
+        font-weight 500
+
+    .fa-comments-o
+      margin-top 160px
+      font-size 130px
+      opacity .2
+      color #232438
+
+    .fa-rocket
+      float left
+      margin-right 25px
+      color white
+      opacity .3
+      position relative
+      top 8px
+
+    .testimonial
+      margin 15px 0 0
+      padding 25px
+      background-color #e9edf4
+      border-radius 5px
+
+      &:hover
+        cursor default
+        background-color #d2dbed
+        transition background .2s ease-in
+    
+      p
+        font-size 16px
+        margin 0
+        color #413458    
+
+      i
+        opacity .2
+        font-size 30px   
+
+      span.name
+        display block
+        font-size 13px
+
+    .call-out
+      line-height 1.5
+      font-size 28px
+      text-align center
+  
+    ul
+      margin 40px 0 0
+      padding 23px 30px 30px
+      background #e9edf4
+      border-radius 10px
+      font-size 16px
+      font-family roboto
+      line-height 1.75
+      color #413458
+
+      p
+        margin 0
+        padding 0
+        font-weight 700
+        color #413458
+    
+      li
+        margin-left 60px
+
+    h3
+      line-height 1.5
+
+  .hero
+    padding 50px 0 80px
+    // background radial-gradient(circle, #37315d, #232438)
+    background-image url('../images/bg-test3.jpg')
+    background-size cover
+    background-position 20% 80%
+    color white
+    text-align center
+
+    h1, h2, p
+      color white
+
+  h1
+    font-size 56px
+
+  h2
+    color #333
+    line-height 1.3
+    font-size 32px
+    font-weight 700
+
+  .class-signup
+    margin 60px auto 60px
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width: 1200px)
+      form
+        padding 0 0 0 20px
+        
+    img
+      width 100%
+      margin 10px 0 0
+    input
+      padding 25px 15px
+      font-size 20px
+      font-family roboto 
+
+    .btn
+      font-family roboto
+      font-size 20px
+      padding 11px 20px
+      font-weight 500
+
+      &.btn-primary
+        background-color darken(#a685bd, 5%)
+        border 0
+        margin-top 3px
+
+        &:hover
+          background-color darken(#a685bd, 15%) 
+          transition background .1s ease-in-out
+
+
+.questions, .opensource
+  margin 0 auto
+
+  &.hero
+    padding 60px 0
+    // background lighten(#232438, 2%)
+    background-image url('../images/bg-test3.jpg')
+    background-size cover
+    background-position 20% 80%
+    margin 0
+
+    h1, h2
+      color white
+      margin 60px 0 0
+
+      /* Medium devices (desktops, 992px and up) */
+      @media screen and (min-width 992px)
+        margin 0
+    
+
+      /* Large devices (large desktops, 1200px and up) */
+      @media screen and (min-width 1200px)
+        margin 20px 0  
+
+    h4
+      color white
+      font-weight 700
+
+    p
+      color #b0b1c2
+  
+    .ctas
+      margin-top 46px
+
+    span.version
+      font-weight 700
+      display block
+      color white
+      font-size 18px
+      margin 0 0 20px 0
+.josh-stamp
+  width 90%
+  margin-top 20px
+  max-width 250px
+
+    
+.about-meteorclub
+  margin 60px auto 70px
+  
+  .section
+    margin 150px 0
+    
+    &:first-child
+      margin 0
+    &:last-child
+      margin-bottom 0
+  
+  .social-links
+    margin-top 40px
+    a
+      color white
+      background-color #615082
+      border-radius 25px
+      display inline-block
+      height 50px
+      width 50px
+      
+      &:hover
+        background-color #a279b9
+        transition background-color .1s
+      
+      i
+        position relative
+        top 12px
+        &.fa-twitter
+          left 13px
+        &.fa-youtube-play
+          left 11px
+        &.fa-github
+          left 13px
+.what-is-meteor
+  padding 80px 0 90px
+  background #cad1e0 
+  p 
+    color #444
+  span.meteor-feature
+    display inline-block 
+    white-space nowrap 
+    background-color lighten(#cad1e0, 35%)
+    padding 5px 10px
+    border-radius 5px
+    margin 5px 2px
+    
+.about-qna
+  margin 60px auto 70px
+
+.video-archive
+  .row
+    margin-top 40px
+
+    span.episode, span.description
+      margin-top 0
+  
+
+    span.episode
+      font-size 32px
+  
+
+    span.description
+      line-height 1.75
+      font-family "Roboto", sans-serif
+      font-size 16px
+      color #555
+  
+
+    &:first-child
+      margin-top 100px
+  
+footer
+  position relative
+  background-color #f2f2f2
+  height 55px
+  bottom 0
+  
+  p
+    font-size 13px
+    margin-bottom 10px
+
+
+.center-block
+  display block
+  margin 0 auto
+  text-align center
+
