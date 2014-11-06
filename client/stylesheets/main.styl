@@ -6,10 +6,12 @@ roboto "Roboto", sans-serif
   margin 0
   padding 0
 
-html, body
-  height 100%
+html 
+    position relative
+    min-height 100%
 
-body
+body 
+  margin 0 0 55px /* bottom = footer height */
   -webkit-font-smoothing antialiased
   text-rendering optimizeLegibility
 
@@ -192,7 +194,7 @@ footer, .push
       
     
 .club-info
-  margin 30px auto 70px
+  margin 30px auto 120px
 
   .title
     margin-bottom 30px !important
@@ -501,18 +503,20 @@ ul
   margin-top 20px
   max-width 250px
 
-    
+.thanks
+  padding 160px 0
+  text-align center
+  // background url('/images/fade-circle.png') 50% 50% no-repeat
+  h2 
+    line-height 1.4
+  i
+    opacity .2
+  
+.about-josh
+  margin 60px auto 120px
 .about-meteorclub
   margin 60px auto 70px
-  
-  .section
-    margin 150px 0
     
-    &:first-child
-      margin 0
-    &:last-child
-      margin-bottom 0
-  
   .social-links
     margin-top 40px
     a
@@ -579,7 +583,10 @@ ul
       margin-top 100px
   
 footer
-  position relative
+  position absolute
+  left 0
+  bottom 0
+  width 100%
   background-color #f2f2f2
   height 55px
   bottom 0
