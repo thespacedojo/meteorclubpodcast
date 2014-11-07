@@ -4,12 +4,12 @@
 			<div class="row">
 				<div class="col-md-6 col-lg-7">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe width="853" height="480" src="//www.youtube.com/embed/LqWbXQDXHC0" frameborder="0" allowfullscreen></iframe>
+						<iframe width="853" height="480" src="//www.youtube.com/embed/LqWbXQDXHC0?modestbranding=1&autohide=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-5">
 					<h2>Ask questions, get answers.</h2>
-					<p>Join Josh Owens (and special guests) every month and ask your questions about Meteor.js, the revolutionary javascript platform. Sometimes we all get stuck and we need a little help&mdash;this is your chance to get that help!</p>
+					<p>Join Josh Owens (and special guests) every month for Meteor Q &amp; A. Tuning in gives you the chance to ask questions about Meteor.js, the revolutionary javascript platform.</p>
 
 					<p>The question and answer sessions are run using Google Hangouts on Air, enabling real-time Q&amp;A functionality and the ability for thousands of viewers to tune in easily. Once the session is over, it is available to watch on <a href="#">Youtube</a>.</p>
 				</div>
@@ -18,59 +18,59 @@
 	</div>
 
 	<div class="container about-qna">
-		<div class="row ctas">
-			<div class="hidden-xs col-sm-3 col-md-3 col-lg-3">
-				<img src="/images/meteor_circle1.png" style="width: 90%;" alt="">
+		<!-- special guests -->
+		<div class="special-guests">
+			<div class="row center-block">
+				<div class="col-md-12">
+					<h2>Special Guests</h2>
+				</div>
 			</div>
-			<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
-				<h3>Lorem ipsum dolor</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, eveniet. Perspiciatis ad expedita molestiae adipisci obcaecati dignissimos illo quis atque rerum doloribus! Voluptatem, mollitia, in! Totam, magnam impedit repellendus eveniet.</p>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi officia, reiciendis sequi exercitationem impedit modi unde quo atque aliquid soluta excepturi illo.</p>
+			<div class="row">
+				<!-- i updated bootstrap styling so grid won't break & will wrap properly when the amount of columns exceeds 12. all you have to do is just add names! -->
+				{{#each guests}}
+					<div class="col-sm-3 col-md-3 col-lg-3 guest">
+						<a href="{{url}}" target="_blank">
+							<img src="{{img}}" class="hidden-xs" alt="">
+							<p>{{name}}</p>
+						</a>
+					</div>
+				{{/each}}
 			</div>
 		</div>
 
+		<!-- video archive list -->
 		<div class="row video-archive">
-			<div class="col-md-9 col-md-offset-3">
+			<div class="col-md-12">
 				<div class="row">
-					<div class="col-md-2">
-						<span class="episode">Nov. 2014</span>
-					</div>
-
-					<div class="col-md-10">
-						<span class="description">Special guest Sacha Greif talks with Josh about lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nemo, voluptates maiores, soluta deleniti minima at, inventore officiis in dolorem excepturi harum ducimus. Rem consectetur ad, aspernatur itaque saepe aperiam.</span>
+					<div class="col-md-12 center-block">
+						<h2>Meteor Q&amp;A Archive</h2>
+						<p>Click an item to view the session and full transcript.</p>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-md-2">
-						<span class="episode">Oct. 2014</span>
-					</div>
+					<div class="col-md-10 col-md-offset-1">
+						{{#each videos}}
+							<a href="{{url}}">
+								<div class="row qna-session">
+									<div class="col-sm-4 col-md-4">
+										<img src="{{thumbnail}}" class="video-thumbnail" alt="">
+									</div>
 
-					<div class="col-md-10">
-						<span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa explicabo ipsum modi itaque quam, quisquam atque quae assumenda nulla recusandae ratione molestias saepe pariatur nobis distinctio soluta consequuntur veritatis nihil.</span>
+									<div class="col-sm-8 col-md-8">
+										<span class="title">Meteor Q&amp;A</span>
+										<span class="episode">{{month}}</span>
+										<span class="description">{{description}}</span>
+									</div>
+
+									<div class="clearfix"></div>
+								</div>
+							</a>
+						{{/each}}
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-md-2">
-						<span class="episode">Sept. 2014</span>
-					</div>
-
-					<div class="col-md-10">
-						<span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ipsa ad similique, unde quidem saepe ratione, tempora natus, error amet facere rem officia hic. Perspiciatis libero, sint expedita modi ea.</span>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-2">
-						<span class="episode">Aug. 2014</span>
-					</div>
-
-					<div class="col-md-10">
-						<span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio nulla voluptates fuga sit dolorem corporis ullam inventore, sint. Magni dolor voluptate sit tempora unde non sapiente ullam, aperiam distinctio error.</span>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>

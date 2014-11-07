@@ -24,7 +24,10 @@ body
 
 footer, .push
   height 2em
-
+  
+a
+  // color #6f3a97
+  color #547ed3
 
 /* todo fix header html, because that's not a header! */
 #header
@@ -464,14 +467,15 @@ ul
   &.hero
     padding 60px 0
     // background lighten(#232438, 2%)
-    background-image url('../images/bg-test3.jpg')
+    background-image url('../images/bg5.jpg')
     background-size cover
     background-position 20% 80%
     margin 0
 
     h1, h2
-      color white
       margin 60px 0 0
+      font-size 42px
+      color white
 
       /* Medium devices (desktops, 992px and up) */
       @media screen and (min-width 992px)
@@ -487,7 +491,8 @@ ul
       font-weight 700
 
     p
-      color #b0b1c2
+      // color #444
+      color lighten(#a6a6b6, 10%)
   
     .ctas
       margin-top 46px
@@ -498,6 +503,10 @@ ul
       color white
       font-size 18px
       margin 0 0 20px 0
+    
+    .embed-responsive iframe
+      border 7px solid #fff
+      
 .josh-stamp
   width 90%
   margin-top 20px
@@ -544,9 +553,13 @@ ul
           left 13px
 .what-is-meteor
   padding 80px 0 90px
-  background #cad1e0 
+  // background #cad1e0 
+  background-image url('/images/bg4.jpg')
+  background-position 80% 50%
+  background-repeat no-repeat
+  background-size cover
   p 
-    color #444
+    color #333
   span.meteor-feature
     display inline-block 
     white-space nowrap 
@@ -559,28 +572,80 @@ ul
     
 .about-qna
   margin 60px auto 70px
+    
+  .special-guests
+    text-align center
+    
+    h2
+      margin 20px 0 70px
+    
+    .guest
+      margin-bottom 30px
+      
+      p, a
+        transition color .2s
+      img
+        width 70%
+        transition opacity .2s
+      
+      &:hover
+        cursor pointer
+        p, a
+          text-decoration none
+          color #845da1
+          transition color .2s
+        img
+          opacity .8
+          transition opacity .2s
 
 .video-archive
-  .row
-    margin-top 40px
+  margin 70px 0 40px
+  
+  
+  .qna-session
+    padding 40px 20px
+    background-color #f2f2f2
+    margin-bottom 40px
+    transition background .2s
+    cursor pointer
+    
+    &:first-child
+      margin-top 40px
+    
+    &:hover
+      background-color #1d1f2d
+      transition background .2s
+      
+      span.episode
+        color white
+      span.description
+        color white
+    
+    .video-thumbnail
+      width 100%
+      border 5px solid #ddd
 
     span.episode, span.description
       margin-top 0
   
-
+    span.title
+      color #888
+      margin 0 0 3px 0
+      display block
+      font-size 15px
+      
     span.episode
-      font-size 32px
-  
+      font-size 24px
+      margin 0 0 7px 0
+      display block
+      font-weight 500
+      color #333
 
     span.description
       line-height 1.75
       font-family "Roboto", sans-serif
       font-size 16px
       color #555
-  
-
-    &:first-child
-      margin-top 100px
   
 footer
   position absolute
@@ -600,4 +665,76 @@ footer
   display block
   margin 0 auto
   text-align center
+
+/* 
+ * BOOTSTRAP AUTO-WRAP COLUMN FIX
+ *
+ *
+ */
+
+/*  Tablet  */
+@media handheld, screen and (min-width: 768px)
+  /* Column clear fix */
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1),
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1)
+    clear none
+  
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1)
+    clear left
+
+/*  Medium Desktop  */
+@media handheld, screen and (min-width: 992px)
+  /* Column clear fix */
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1),
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1)
+    clear none
+
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1)
+    clear left
+
+/*  Large Desktop  */
+@media handheld, screen and (min-width:1200px)
+  /* Column clear fix */
+  .col-md-1:nth-child(12n+1),
+  .col-md-2:nth-child(6n+1),
+  .col-md-3:nth-child(4n+1),
+  .col-md-4:nth-child(3n+1),
+  .col-md-6:nth-child(2n+1),
+  .col-sm-1:nth-child(12n+1),
+  .col-sm-2:nth-child(6n+1),
+  .col-sm-3:nth-child(4n+1),
+  .col-sm-4:nth-child(3n+1),
+  .col-sm-6:nth-child(2n+1)
+    clear none
+
+  .col-lg-1:nth-child(12n+1),
+  .col-lg-2:nth-child(6n+1),
+  .col-lg-3:nth-child(4n+1),
+  .col-lg-4:nth-child(3n+1),
+  .col-lg-6:nth-child(2n+1)
+    clear left
 
