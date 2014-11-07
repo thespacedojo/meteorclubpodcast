@@ -1,3 +1,4 @@
+// array for special guests
 var guestDetails = [
 	{
 		name: 'Sacha Greif',
@@ -21,6 +22,7 @@ var guestDetails = [
 	}
 ];
 
+// array for video archive details
 var videoDetails = [
 	{
 		featured: 1,
