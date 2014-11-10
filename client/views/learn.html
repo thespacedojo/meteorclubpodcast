@@ -155,12 +155,13 @@
 			<form class="form" role="form">
 			  	<div class="form-group">
 				  <label class="sr-only" for="exampleInputPassword2">Name</label>
-				  <input type="name" class="form-control" id="exampleInputname2" placeholder="joe developer">
+				  <input type="name" class="form-control" name="fullName" required id="exampleInputname2" placeholder="joe developer">
 				</div>
 				<div class="form-group">
 				  <label class="sr-only" for="exampleInputEmail2">Email address</label>
-				  <input type="email" class="form-control" id="exampleInputEmail2" placeholder="joe.developer@hotstartup.com">
+				  <input type="email" class="form-control" name="email" required id="exampleInputEmail2" placeholder="joe.developer@hotstartup.com">
 				</div>
+        <input type="hidden" name="referrer" id="referrer">
 
 				<button type="submit" class="btn btn-primary">Beam me up, Scotty!</button>
 			</form>
