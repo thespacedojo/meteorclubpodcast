@@ -46,10 +46,16 @@ a
   text-transform lowercase
   font-weight 700
   border-radius 0
+  border none
   margin-bottom 0
 
+
 .navbar, .navbar-default
-  height 80px
+  min-height 80px
+  
+  .navbar-toggle
+    margin-top 22px
+    margin-bottom 25px
 
   li a
     color #bbb
@@ -318,8 +324,7 @@ ul
   
 
     &:first-child
-      margin-top 60px
-  
+      margin-top 60px  
 
     strong
       font-weight 700
@@ -328,31 +333,12 @@ ul
         color red
     p
       font-size 18px
-  
-
-    .well
-      margin 40px 0
-      background-color #232438 !important
-      border none !important
-
-      p
-        margin 0
-        color white !important
-        font-weight 500
 
     .fa-comments-o
       margin-top 160px
       font-size 130px
       opacity .2
       color #232438
-
-    .fa-rocket
-      float left
-      margin-right 25px
-      color white
-      opacity .3
-      position relative
-      top 8px
 
     .testimonial
       margin 15px 0 0
@@ -464,16 +450,38 @@ ul
           background-color darken(#a685bd, 15%) 
           transition background .1s ease-in-out
 
+.well
+  margin 40px 0
+  background-color #232438 !important
+  border none !important
 
-.questions, .opensource
+  p
+    margin 0
+    color white !important
+    font-weight 500
+    
+  .fa
+    float left
+    margin 0 25px 0 5px
+    color white
+    opacity .3
+    position relative
+    top 8px
+  
+  a
+    color #afb0c0
+    text-decoration underline
+    
+.questions
   margin 0 auto
 
   &.hero
-    padding 60px 0
+    padding 90px 0
     // background lighten(#232438, 2%)
-    background-image url('../images/bg5.jpg')
+    background-image url('/images/bg5.jpg')
+    background-position 80% 50%
+    background-repeat no-repeat
     background-size cover
-    background-position 20% 80%
     margin 0
 
     h1, h2
@@ -495,8 +503,10 @@ ul
       font-weight 700
 
     p
-      // color #444
-      color lighten(#a6a6b6, 10%)
+      color #b9bacb
+      
+      a
+        color white
   
     .ctas
       margin-top 46px
@@ -509,8 +519,9 @@ ul
       margin 0 0 20px 0
     
     .embed-responsive iframe
-      border 7px solid #fff
-      
+      border 4px solid #000
+      border-radius 5px
+   
 .josh-stamp
   width 90%
   margin-top 20px
@@ -528,7 +539,7 @@ ul
 .about-josh
   margin 60px auto 120px
 .about-meteorclub
-  margin 60px auto 70px
+  margin 110px auto 130px
     
   .social-links
     margin-top 40px
@@ -570,89 +581,141 @@ ul
   span.meteor-feature
     display inline-block 
     white-space nowrap 
-    background-color lighten(#cad1e0, 35%)
+    background-color #242738
+    color white
     padding 5px 10px
     -webkit-border-radius 5px
     -moz-border-radius 5px
     border-radius 5px
     margin 5px 2px
     
+    &:hover
+      cursor default
+      background-color lighten(#242738, 5%)
+    
 .about-qna
-  margin 60px auto 70px
+  padding 60px 0 0
+  
+  h2
+    // text-transform uppercase
+    color #333
     
   .special-guests
-    text-align center
-    
     h2
       margin 20px 0 70px
     
     .guest
       margin-bottom 30px
+      text-align center
       
-      p, a
+      p
         transition color .2s
+        font-weight 700
+        margin 15px 0 0
       img
         width 70%
         transition opacity .2s
       
       &:hover
-        cursor pointer
-        p, a
-          text-decoration none
-          color #845da1
-          transition color .2s
-        img
-          opacity .8
-          transition opacity .2s
+        text-decoration none
 
 .video-archive
   margin 70px 0 40px
   
+  a:hover
+    text-decoration none
   
   .qna-session
-    padding 40px 20px
+    padding 30px 15px
     background-color #f2f2f2
     margin-bottom 40px
     transition background .2s
     cursor pointer
+    border-radius 5px
+    position relative
+    
+    span.upcoming-episode, span.transcript
+      display none
+      position absolute
+      padding 12px 16px
+      font-size 16px
+      transition background .2s
+      top 0
+      right 0
+      border-top-right-radius 5px
+      border-bottom-left-radius 5px
+      
+      /* Small devices (tablets, 768px and up) */
+      @media screen and (min-width: 768px) 
+        display block
+    
+    span.transcript
+      background-color darken(#f2f2f2, 8%)
+      color #555
+
+    &.upcoming    
+      span.title
+        display inline
+        color lighten(#1d1f2d, 50%)
+        
+      span.upcoming-episode
+        background-color darken(#42446c, 5%)
+        color white
+    
+
     
     &:first-child
       margin-top 40px
     
     &:hover
-      background-color #1d1f2d
-      transition background .2s
+      background-color #eaebf3
+      transition background .2s, color .2s
       
-      span.episode
-        color white
-      span.description
-        color white
+      span.title
+        color lighten(#1d1f2d, 50%)
+        transition color .2s
+      
+      span.transcript
+        background-color darken(#eaebf3, 10%)
     
     .video-thumbnail
       width 100%
-      border 5px solid #ddd
+      border-radius 5px
+      margin 0 0 20px 0
+      
+      /* Small devices (tablets, 768px and up) */
+      @media screen and (min-width: 768px) 
+        margin 0
 
     span.episode, span.description
       margin-top 0
   
     span.title
-      color #888
+      color lighten(#1d1f2d, 50%)
       margin 0 0 3px 0
       display block
       font-size 15px
       
     span.episode
-      font-size 24px
-      margin 0 0 7px 0
+      font-size 30px
+      margin 5px 0 7px 0
       display block
-      font-weight 500
-      color #333
+      color #3a3b47
 
     span.description
       line-height 1.75
       font-family "Roboto", sans-serif
       font-size 16px
       color #555
+
+    
+.transcription
+  padding 40px 0 80px
+  
+  .embed-responsive
+    margin 20px 0 60px 0
+    border 3px solid #000
+    border-radius 5px
   
 footer
   position absolute

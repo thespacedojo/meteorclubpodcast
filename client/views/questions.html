@@ -4,14 +4,14 @@
 			<div class="row">
 				<div class="col-md-6 col-lg-7">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe width="853" height="480" src="//www.youtube.com/embed/LqWbXQDXHC0?modestbranding=1&autohide=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>
+						<iframe width="853" height="480" src="//www.youtube.com/embed/VFgci7-xVc8?modestbranding=1&autohide=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-5">
 					<h2>Ask questions, get answers.</h2>
-					<p>Join Josh Owens (and special guests) every month for the Meteor Club Q&amp;A. Tuning in gives you the chance to ask questions about Meteor.js, the revolutionary javascript platform.</p>
+					<p>Join Josh Owens (and special guests) every month for the Meteor Club Q&amp;A. Tune in for the chance to ask questions about Meteor.js, the revolutionary javascript platform.</p>
 
-					<p>The question and answer sessions are run using Google Hangouts on Air, enabling real-time Q&amp;A functionality and the ability for thousands of viewers to tune in easily. Once the session is over, it is available to watch on <a href="#">Youtube</a>.</p>
+					<p>The question and answer sessions are run using Google Hangouts on Air, enabling real-time Q&amp;A functionality and the ability for thousands of viewers to tune in easily. Once the session is over, it is <a href="https://www.youtube.com/channel/UCjRSH4MO9CR40bJQxfZMFWQ">available to watch on Youtube</a>.</p>
 				</div>
 			</div>
 		</div>
@@ -19,10 +19,10 @@
 
 	<div class="container about-qna">
 		<!-- special guests -->
-		<div class="special-guests">
-			<div class="row center-block">
+		<div class="special-guests center-block">
+			<div class="row">
 				<div class="col-md-12">
-					<h2>Special Guests</h2>
+					<h2>Special <strong>Guests</strong></h2>
 				</div>
 			</div>
 
@@ -30,47 +30,52 @@
 				<!-- i updated bootstrap styling so grid won't break & will wrap properly when the amount of columns exceeds 12. all you have to do is just add names! -->
 				{{#each guests}}
 					<div class="col-sm-3 col-md-3 col-lg-3 guest">
-						<a href="{{url}}" target="_blank">
+						<!-- <a href="{{url}}" target="_blank"> -->
 							<img src="{{img}}" class="hidden-xs" alt="">
 							<p>{{name}}</p>
-						</a>
+							<a href="{{url}}">{{url}}</a>
+						<!-- </a> -->
 					</div>
 				{{/each}}
 			</div>
 		</div>
 
 		<!-- video archive list -->
-		<div class="row video-archive">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-12 center-block">
-						<h2>Meteor Q&amp;A Archive</h2>
-						<p>Click an item to view the session and full transcript.</p>
+		<div class="video-archive">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="center-block">
+						<h2>Meteor Club <strong>Q&amp;A</strong></h2>
+						<!-- <p>In order to make Metoer Club Q&amp;A as helpful as possible, we have listed upcoming and previous episodes here in a full archive. Click a previous episode to view the transcript, which is also available for download.</p> -->
 					</div>
 				</div>
+			</div>
 
-				<div class="row">
-					<div class="col-md-10 col-md-offset-1">
-						{{#each videos}}
-							<a href="{{url}}">
-								<div class="row qna-session">
-									<div class="col-sm-4 col-md-4">
-										<img src="{{thumbnail}}" class="video-thumbnail" alt="">
-									</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					{{#each videos}}
+						<a href="{{url}}">
+							<div class="row qna-session {{#if upcoming}}upcoming{{/if}}">
 
-									<div class="col-sm-8 col-md-8">
-										<span class="title">Meteor Q&amp;A</span>
-										<span class="episode">{{month}}</span>
-										<span class="description">{{description}}</span>
-									</div>
-									
-									<div class="clearfix"></div>
+								<div class="col-sm-4 col-md-4">
+									<img src="{{thumbnail}}" class="video-thumbnail" alt="">
 								</div>
-							</a>
-						{{/each}}
-					</div>
-				</div>
 
+								<div class="col-sm-8 col-md-8">
+									<span class="title">Meteor Q&amp;A</span>
+
+									<span class="episode">{{month}}</span>
+									<span class="description">{{description}}</span>
+								</div>
+								<div class="clearfix"></div>
+
+								{{#if upcoming}}<span class="upcoming-episode"><i class="fa fa-rocket"></i>&nbsp; Upcoming Episode</span> {{else}}
+								<span class="transcript"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</span>
+								{{/if}}
+							</div>
+						</a>
+					{{/each}}
+				</div>
 			</div>
 		</div>
 	</div>
