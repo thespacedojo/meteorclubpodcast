@@ -1,7 +1,7 @@
 Meteor.methods sendEmail: (signupId) ->
   check signupId, String
 
-  signup = Signup.first({_id: signupId})
+  signup = Signups.findOne({_id: signupId})
   # Let other method calls from the same client start running,
   # without waiting for the email sending to complete.
   @unblock()
@@ -25,4 +25,4 @@ Meteor.methods sendEmail: (signupId) ->
     from: from
     subject: subject
     text: text
-  signup.update({sentEmailAt: new Date()})
+  Signups.update(signupId, {$set: {sentEmailAt: new Date()}})
