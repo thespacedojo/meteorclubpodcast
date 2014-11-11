@@ -11,7 +11,7 @@ Meteor.methods sendEmail: (signupId) ->
   text = "Hey #{signup.name},\r\n\r\n"
   text += "I was looking over my applications wanted to find out your level of javascript knowledge. How comfortable are you with javascript?\r\n\r\n
 
-    Let me know if you would be interested in taking the class, which takes place on the two dates below.\r\n
+    Let me know if you would be interested in taking the 2-day class, which takes place on the two dates below.\r\n
 
     * Saturday, December 6th at 10am - 2pm EST\r\n
     * Saturday, December 13th at 10am - 2pm EST\r\n\r\n
