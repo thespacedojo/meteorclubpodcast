@@ -1,0 +1,24 @@
+<template name="dashboard">
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Contact</th>
+  </thead>
+  <tbody>
+  {{#each signups}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{email}}</td>
+
+      {{#if contacted}}
+        <td>Contacted</td>
+      {{else}}
+        <td><button class='btn btn-default'>Email</button></td>
+      {{/if}}
+    </tr>
+
+  {{/each}}
+  </tbody>
+</table>
+</template>
