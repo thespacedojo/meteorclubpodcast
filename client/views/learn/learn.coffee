@@ -6,5 +6,6 @@ Template.learn.events
     e.preventDefault()
     signupInfo = SimpleForm.processForm(e.target)
     Meteor.call 'apply', signupInfo, () ->
+      ga('send', 'event', 'Training', 'Apply', 'Mastering Meteor')
       SimpleForm.resetForm(e.target)
       Router.go('/apply/thanks')
