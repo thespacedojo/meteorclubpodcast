@@ -27,9 +27,9 @@ iron:controller@1.0.0
 iron:core@1.0.0
 iron:dynamic-template@1.0.0
 iron:layout@1.0.0
-iron:location@1.0.1
+iron:location@1.0.0
 iron:middleware-stack@1.0.0
-iron:router@1.0.1
+iron:router@1.0.0
 iron:url@1.0.0
 joshowens:simple-form@0.2.2
 jquery@1.0.1

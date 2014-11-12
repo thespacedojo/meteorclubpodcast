@@ -1,5 +1,5 @@
 <template name="questions">
-	<div class="questions hero">
+	<div class="questions hero two">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-lg-7">
@@ -18,8 +18,9 @@
 	</div>
 
 	<div class="container about-qna">
+
 		<!-- special guests -->
-		<div class="special-guests center-block">
+		<div class="guests center-block">
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Special <strong>Guests</strong></h2>
@@ -30,23 +31,20 @@
 				<!-- i updated bootstrap styling so grid won't break & will wrap properly when the amount of columns exceeds 12. all you have to do is just add names! -->
 				{{#each guests}}
 					<div class="col-sm-3 col-md-3 col-lg-3 guest">
-						<!-- <a href="{{url}}" target="_blank"> -->
-							<img src="{{img}}" class="hidden-xs" alt="">
-							<p>{{name}}</p>
-							<a href="{{url}}">{{url}}</a>
-						<!-- </a> -->
+						<img src="{{img}}" class="hidden-xs" alt="">
+						<p>{{name}}</p>
+						<a href="{{url}}">{{url}}</a>
 					</div>
 				{{/each}}
 			</div>
 		</div>
 
 		<!-- video archive list -->
-		<div class="video-archive">
+		<div class="episode-archive">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="center-block">
 						<h2>Meteor Club <strong>Q&amp;A</strong></h2>
-						<!-- <p>In order to make Metoer Club Q&amp;A as helpful as possible, we have listed upcoming and previous episodes here in a full archive. Click a previous episode to view the transcript, which is also available for download.</p> -->
 					</div>
 				</div>
 			</div>
@@ -55,17 +53,17 @@
 				<div class="col-md-10 col-md-offset-1">
 					{{#each videos}}
 						<a href="{{url}}">
-							<div class="row qna-session {{#if upcoming}}upcoming{{/if}}">
+							<div class="row episode {{#if upcoming}}upcoming{{/if}}">
 
 								<div class="col-sm-4 col-md-4">
 									<img src="{{thumbnail}}" class="video-thumbnail" alt="">
 								</div>
 
 								<div class="col-sm-8 col-md-8">
-									<span class="title">Meteor Q&amp;A</span>
+									<span class="episode-title">Meteor Q&amp;A</span>
 
-									<span class="episode">{{month}}</span>
-									<span class="description">{{description}}</span>
+									<span class="episode-month">{{month}}</span>
+									<span class="episode-description">{{description}}</span>
 								</div>
 								<div class="clearfix"></div>
 
