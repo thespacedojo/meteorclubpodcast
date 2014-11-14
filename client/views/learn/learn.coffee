@@ -12,3 +12,10 @@ Template.learn.events
       ga('send', 'event', 'Training', 'Apply', 'Mastering Meteor')
       SimpleForm.resetForm(e.target)
       Router.go('/apply/thanks')
+
+  'click .footerbutton': (e) ->
+    e.preventDefault()
+    if $(".slide-content").css('height') is "0px"
+      $(".slide-content").animate height: "120px"
+    else
+      $(".slide-content").animate height: "0px"
