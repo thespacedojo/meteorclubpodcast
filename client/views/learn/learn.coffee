@@ -2,7 +2,7 @@ Template.learn.rendered = () ->
   $('input#referrer').val(decodeURI(document.referrer))
   Tracker.autorun ->
     perc = Session.get("scrollPercentage")
-    ga('send', 'event', 'Training', 'Scroll', perc)
+    ga('send', 'pageview', "/mastering-meteor/#{perc}")
     if $(".slide-content").css('height') is "0px" and perc > 74
       $(".slide-content").animate height: "120px"
 
@@ -11,7 +11,7 @@ Template.learn.events
     e.preventDefault()
     signupInfo = SimpleForm.processForm(e.target)
     Meteor.call 'apply', signupInfo, () ->
-      ga('send', 'event', 'Training', 'Apply', 'Mastering Meteor')
+      ga('send', 'pageview', '/mastering-meteor/applied')
       SimpleForm.resetForm(e.target)
       Router.go('/apply/thanks')
 
