@@ -3,6 +3,8 @@ Template.learn.rendered = () ->
   Tracker.autorun ->
     perc = Session.get("scrollPercentage")
     ga('send', 'event', 'Training', 'Scroll', perc)
+    if $(".slide-content").css('height') is "0px" and perc > 74
+      $(".slide-content").animate height: "120px"
 
 Template.learn.events
   'submit form': (e, t) ->
