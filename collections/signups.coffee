@@ -7,4 +7,4 @@ Signups.helpers
 Meteor.methods
   'apply': (info) ->
     if Meteor.isServer
-      Signups.insert({name: info.fullName, email: info.email, referrer: info.referrer})
+      Signups.insert({name: info.fullName, email: info.email, referrer: info.referrer, classType: info.classType})
