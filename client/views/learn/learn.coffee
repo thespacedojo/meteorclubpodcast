@@ -10,7 +10,6 @@ Template.learn.events
   'submit form': (e, t) ->
     e.preventDefault()
     signupInfo = SimpleForm.processForm(e.target)
-    signupInfo.class = 'meteor'
     Meteor.call 'apply', signupInfo, () ->
       ga('send', 'pageview', '/mastering-meteor/applied')
       SimpleForm.resetForm(e.target)

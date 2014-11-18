@@ -10,7 +10,6 @@ Template.testing.events
   'submit form': (e, t) ->
     e.preventDefault()
     signupInfo = SimpleForm.processForm(e.target)
-    signupInfo.class = 'testing'
     Meteor.call 'apply', signupInfo, () ->
       ga('send', 'pageview', '/testing-meteorjs/applied')
       SimpleForm.resetForm(e.target)
