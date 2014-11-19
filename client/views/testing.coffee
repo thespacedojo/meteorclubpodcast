@@ -4,7 +4,10 @@ Template.testing.rendered = () ->
     perc = Session.get("scrollPercentage")
     ga('send', 'pageview', "/testing-meteorjs/#{perc}")
     if $(".slide-content").css('height') is "0px" and perc > 74
-      $(".slide-content").animate height: "120px"
+      if $(window).width() <= 700
+        $(".slide-content").animate height: "350px"
+      else
+        $(".slide-content").animate height: "120px"
 
 Template.testing.events
   'submit form': (e, t) ->
@@ -18,6 +21,9 @@ Template.testing.events
   'click .footerbutton': (e) ->
     e.preventDefault()
     if $(".slide-content").css('height') is "0px"
-      $(".slide-content").animate height: "120px"
+      if $(window).width() <= 700
+        $(".slide-content").animate height: "350px"
+      else
+        $(".slide-content").animate height: "120px"
     else
       $(".slide-content").animate height: "0px"

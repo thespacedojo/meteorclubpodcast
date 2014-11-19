@@ -123,7 +123,7 @@ ul
       color #111
     
 .footer-signup
-    border-top 1px solid darken(#a685bd, 10%)
+    border-top 3px solid #404286
     position fixed
     bottom 0
     width 100%
@@ -135,24 +135,25 @@ ul
     
   &.footerbutton
     position  absolute
-    background darken(#a685bd, 10%)
+    background #404286
     border-top-right-radius 3px
     border-top-left-radius 3px
-    top  -40px
+    top  -42px
     right 3%
     font-size 18px
     font-family roboto
     color white
-    padding 7px 15px
+    padding 9px 15px 7px
     border  none
     cursor  pointer
   
   &.slide-content
     width 100%
     height 0px
-    // height 100px
-    background #ddd !important
-    color red
+    background-image url('/images/bg9.jpg')
+    background-position 80% 50%
+    background-repeat no-repeat
+    background-size cover
     border none
     font-family roboto
     
@@ -160,15 +161,80 @@ ul
       height 50px
       margin 3px 10px 0 0
       font-size 16px
+      border none
+      width 100%
     
-    input[type=email]
-      width 280px
+    p
+      color #fff
+      margin-top 35px
+      line-height 1.6
+      font-size 18px
     
     button
-      width 200px
+      width 100%
+      font-weight 500
+      background #404286 !important
     
     .form-inline
       margin-top 35px
+    
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width: 768px) 
+      input[type=name], input[type=email]
+        height 40px
+        margin 3px 5px 0 0
+        font-size 14px
+        border none
+      input[type=name]
+        width 120px
+      input[type=email]
+        width 220px 
+      button
+        width 110px
+        height 40px
+        font-size 14px
+      p
+        color #fff
+        line-height 1.3
+        font-size 14px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px)
+      input[type=name], input[type=email]
+        height 50px
+        margin 3px 10px 0 0
+        font-size 18px
+        border none
+      input[type=name]
+        width 170px
+      input[type=email]
+        width 260px 
+      button
+        width 150px
+        height 50px
+        font-size 18px
+      p
+        line-height 1.6
+        font-size 16px
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width: 1200px)
+      input[type=name]
+        width 210px
+      input[type=email]
+        width 350px 
+      button
+        width 150px
+      p
+        line-height 1.6
+        font-size 18px
+
+.test-width
+  width 200px
+  
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (min-width: 768px) 
+    width 1000px
 
 .navbar-brand img
   height 41px
@@ -566,6 +632,12 @@ footer
           background-color darken(#a685bd, 15%)
           transition background .1s ease-in-out
 
+.sign-up
+  margin-bottom 330px
+  
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (min-width: 768px) 
+    margin-bottom 130px
 
 /* * *
 05 QUESTIONS ---------------------------------------------------------------
@@ -729,6 +801,9 @@ footer
 
     h1, h2, p
       color white
+    
+    &.alt
+      background-image url('../images/bg7.jpg')
   &.two
     padding 80px 0 85px
     background-image url('/images/bg5.jpg')
