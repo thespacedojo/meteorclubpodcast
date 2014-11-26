@@ -89,6 +89,7 @@ ul
 
 .navbar
   background-color #fff
+  opacity .4
   font-family roboto
   text-transform lowercase
   font-weight 700
@@ -256,13 +257,37 @@ footer
 01 HOME --------------------------------------------------------------------
 * * */
 
-.email-capture
-  margin 0 0 20px 0
-  height 500px
-  background-image url('../images/bg-test3.jpg')
+.podcast-hero
+  margin 0
+  height 400px
+  background-image url('../images/raw-bg2.jpg')
   background-size cover
-  background-position 0 50%
-  padding 30px 0
+  background-position 90% 55%
+  padding 30px 0 10px
+  // position relative
+  
+  .container
+    position relative
+    height 100%
+  
+  .latest-episode
+    position absolute
+    bottom 10px
+    left 15px
+    color white
+    font-size 15px
+    text-transform uppercase
+    letter-spacing 1px
+  
+  span.tagline
+    font-style oblique
+    color white
+    opacity .7
+    font-size 16px
+    
+    a
+      opacity .9 !important
+      color white
 
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width 768px)
@@ -277,7 +302,7 @@ footer
   /* Large devices (large desktops, 1200px and up) */
   @media screen and (min-width 1200px)
     height 500px 
-    padding 80px 0
+    padding 140px 0 0
 
   h1
     font-size 28px
@@ -293,7 +318,7 @@ footer
 
     /* Large devices (large desktops, 1200px and up) */
     @media screen and (min-width 1200px)
-      font-size 40px
+      font-size 48px
 
   p
     color darken(white, 25%)
@@ -305,71 +330,76 @@ footer
     @media screen and (min-width 1200px)
       margin 20px 0
 
-  .form-control
-    padding 24px 15px
-    font-size 20px
-    font-family roboto
-
-  .btn
-    font-family roboto
-    font-size 20px
-    padding 11px 20px
-    font-weight 700
-    letter-spacing 1px
-
-    &.btn-primary
-      background-color darken(#a685bd, 5%)
-      border 0
-      margin-top 3px
-
-      &:hover
-        background-color darken(#a685bd, 15%) 
-        -webkit-transition background .1s ease-in-out
-        transition background .1s ease-in-out
-
-  .subscribe-form
-    margin-top 20px
-
-    input
-      background-color #1d1f2d
-      border none
-
-    .radio
-      margin-top 3px
-      font-size 14px
-      font-family roboto
-      color white
-
-      input[type=radio]
-        margin-top 12px
-        padding-right 10px
-        color white
-        background transparent
-        
-      .radio-question
-        margin 0
-        width 100%
-        padding 6px 10px 5px
-        -webkit-border-radius 5px
-        -moz-border-radius 5px
-        border-radius 5px
-        display inline-block
-        min-height 50px 
-
-        span
-          display inline-block
-          margin 10px 0 0 5px
-          line-height 1.2 
-
-          /* Medium devices (desktops, 992px and up) */
-          @media screen and (min-width 992px)
-            margin 3px 0 0 5px
-        
-        &:hover
-          opacity .6
-          transition opacity .2s ease-in-out 
-      
+.podcast-play
+  background-color #eee
+  height 70px
+  padding 25px 0
+  
+  h1,h2,h3,h4,h5,h6,p
+    margin 0
+  
+  .progress-bar
+    background-color #ddd
+    border-radius 20px 20px 20px 20px  
+    overflow hidden  
+    position absolute  
+    left 65px
+    top 6px
+    width 850px 
+    height 10px 
+    -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset  
+    box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset 
     
+  .volume-bar
+    position absolute
+    right 10px  
+    top 6px  
+    width 45px  
+    height 8px  
+    border-radius 20px 20px 20px 20px  
+    -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.1) inset  
+    box-shadow 0 1px 1px 0 rgba(0,0,0,0.1) inset  
+    background-color #992E18  
+    overflow hidden
+  
+  span.play
+    font-size 28px
+    position relative
+    bottom 9px
+    left 0 !important
+    margin 0 !important
+    padding 0
+    display inline
+    color #555
+  
+  span.option
+    font-size 15px
+    text-transform uppercase
+    display inline
+    margin 0 20px 0
+    
+    &:first-child
+      margin 0 0 0
+
+.spotlight-details
+  margin 60px 0 0
+  span.date
+    margin 0
+  h3
+    margin 7px 0
+  p
+    margin 0
+  .placeholder-image
+    background #eee
+    width 200px
+    height 200px
+    border-radius 50%
+  span.date
+    font-size 15px
+    color #888
+    text-transform uppercase
+    letter-spacing 1px
+      
 .resources
   margin 30px auto 120px
 
@@ -422,19 +452,12 @@ footer
     @media screen and (min-width 992px)
       padding 30px 20px
 
-
-/* * *
-02 ABOUT -------------------------------------------------------------------
-* * */
-
-.about-meteorclub
-  margin 110px auto 130px
-    
+   
 .social-links
   margin-top 40px
   a
-    color white
-    background-color #615082
+    color #615082
+    background-color white
     -webkit-border-radius 25px
     -moz-border-radius 25px
     border-radius 25px
@@ -455,284 +478,34 @@ footer
         left 11px
       &.fa-github
         left 13px
-          
-.what-is-meteor
-  padding 80px 0 90px
-  background-image url('/images/bg5.jpg')
-  background-position 80% 50%
-  background-repeat no-repeat
-  background-size cover
-  
-  p, h3 
-    color white
-    
-    a
-      color #afb0c0
-      text-decoration underline
-  
-  span.meteor-feature
-    display inline-block
-    white-space nowrap
-    background-color #242738
-    color white
-    padding 5px 10px
-    -webkit-border-radius 5px
-    -moz-border-radius 5px
-    border-radius 5px
-    margin 5px 2px
-    
-    &:hover
-      cursor default
-      background-color lighten(#242738, 5%)
 
-.about-josh
-  margin 60px auto 120px
-  padding 0 30px
-  
-  /* Small devices (tablets, 768px and up) */
-  @media screen and (min-width: 768px) 
-    padding 0
-
-// used on learn page as well
-.josh-stamp
-  width 90%
-  margin-top 20px
-  max-width 250px
-
-
-/* * *
-03 LEARN -------------------------------------------------------------------
-* * */
-
-.learn
-  .section
-    margin-top 80px
-    
-    &:first-child
-      margin-top 60px
-    
-    &.small-margin
-      margin-top 30px
-
-    &.whoami
-      border-top 1px solid #ddd
-      border-bottom 1px solid #ddd
-      padding 50px 0 70px
-  
-    &.testimonials
-      border-top 1px solid #ddd
-      border-bottom 1px solid #ddd
-      padding 30px 0 70px
-
-    strong
-      font-weight 700
-
-      &.love
-        color red
-    p
-      font-size 18px
-
-    .fa-comments-o
-      margin-top 160px
-      font-size 130px
-      opacity .2
-      color #232438
-
-    .testimonial
-      margin 15px 0 0
-      padding 25px
-      background-color #e9edf4
-      -webkit-border-radius 5px
-      -moz-border-radius 5px
-      border-radius 5px
-
-      &:hover
-        cursor default
-        background-color #d2dbed
-        transition background .2s ease-in
-    
-      p
-        font-size 16px
-        margin 0
-        color #413458    
-
-      i
-        opacity .2
-        font-size 30px   
-
-      span.name
-        display block
-        font-size 13px
-
-    .call-out
-      line-height 1.5
-      font-size 28px
-      text-align center
-  
-    ul
-      margin 40px 0 0
-      padding 23px 30px 30px
-      background #e9edf4
-      -webkit-border-radius 10px
-      -moz-border-radius 10px
-      border-radius 10px
-      font-size 16px
-      font-family roboto
-      line-height 1.75
-      color #413458
-
-      p
-        margin 0
-        padding 0
-        font-weight 700
-        color #413458
-    
-      li
-        margin-left 60px
-
-    h3
-      line-height 1.5
-
-  h1
-    font-size 56px
-
-  h2
-    color #333
-    line-height 1.3
-    font-size 32px
-    font-weight 700
-
-  .class-signup
-    margin 60px auto 60px
-    /* Large devices (large desktops, 1200px and up) */
-    @media screen and (min-width: 1200px)
-      form
-        padding 0 0 0 20px
-        
-    img
-      width 100%
-      margin 10px 0 0
-    input
-      padding 25px 15px
-      font-size 20px
-      font-family roboto 
-
-    .btn
-      font-family roboto
-      font-size 20px
-      padding 11px 20px
-      font-weight 500
-
-      &.btn-primary
-        background-color darken(#a685bd, 5%)
-        border 0
-        margin-top 3px
-
-        &:hover
-          background-color darken(#a685bd, 15%)
-          transition background .1s ease-in-out
-
-.sign-up
-  margin-bottom 330px
-  
-  /* Small devices (tablets, 768px and up) */
-  @media screen and (min-width: 768px) 
-    margin-bottom 130px
-
-/* * *
-05 QUESTIONS ---------------------------------------------------------------
-* * */
-
-.about-qna
-  padding 60px 0 0
-
-.guests
-  h2
-    margin 20px 0 70px
-  
-  .guest
-    margin-bottom 30px
-    text-align center
-    p
-      transition color .2s
-      font-weight 700
-      margin 15px 0 0
-    img
-      width 70%
-      transition opacity .2s
-    
-    &:hover
-      text-decoration none
         
 
 .episode-archive
-  margin 70px 0 40px
+  margin 0 0 5px
   
   a:hover
     text-decoration none
   
   .episode
     padding 30px 15px
-    background-color #f2f2f2
-    margin-bottom 40px
     transition background .2s
-    cursor pointer
-    border-radius 5px
     position relative
-    
-    &:first-child
-      margin-top 40px
-    
-    &:hover
-      background-color #eaebf3
-      transition background .2s, color .2s
-      
-      span.episode-title
-        color lighten(#1d1f2d, 50%)
-        transition color .2s
-      
-      span.transcript
-        background-color darken(#eaebf3, 10%)
-    
-    span.upcoming-episode, span.transcript
-      display none
-      position absolute
-      padding 12px 16px
-      font-size 16px
-      transition background .2s
-      top 0
-      right 0
-      border-top-right-radius 5px
-      border-bottom-left-radius 5px
-      
-      /* Small devices (tablets, 768px and up) */
-      @media screen and (min-width: 768px)
-        display block
-    
-    span.transcript
-      background-color darken(#f2f2f2, 8%)
-      color #555
-
-    &.upcoming    
-      span.episode-title
-        display inline
-        color lighten(#1d1f2d, 50%)
-        
-      span.upcoming-episode
-        background-color darken(#42446c, 5%)
-        color white
+    border-bottom 1px solid #ddd
+  
 
     span.episode-month, span.episode-description
       margin-top 0
   
     span.episode-title
-      color lighten(#1d1f2d, 50%)
+      color #333
+      opacity .5
       margin 0 0 3px 0
       display block
       font-size 15px
       
     span.episode-month
-      font-size 30px
+      font-size 24px
       margin 5px 0 7px 0
       display block
       color #3a3b47
@@ -751,6 +524,12 @@ footer
       /* Small devices (tablets, 768px and up) */
       @media screen and (min-width: 768px) 
         margin 0
+
+.meteor-club
+  margin 20px 0 60px
+
+.pagination
+  padding 0 30px
 
 
 /* TRANSCRIPTION PAGE */  

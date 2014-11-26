@@ -1,118 +1,110 @@
 <template name="home">
-	<div class="email-capture">
+	<div class="podcast-hero">	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12 center-block">
+					<h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
+					<span class="tagline">Hosted by <a href="#">Josh Owens</a> and <a href="#">Ry Walker</a>. Part of <a href="#">Meteor Club</a>.</span>
+
+					<h3><i class="fa fa-chevron-circle-down fa-2x" style="color: white;"></i></h3>
+				</div>
+			</div>
+
+			<div class="latest-episode">
+				<span><strong>Episode 42:</strong> Latest Episode Spotlighted Here</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="podcast-play">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<span class="play pull-left"><i class="fa fa-play"></i></span>
+					<div class="progress-bar"></div>
+					<!-- <div class="volume-bar"></div> -->
+				</div>
+				<div class="col-lg-3">
+					<span class="option pull-right"><i class="fa fa-apple"></i>&nbsp; iTunes</span>
+					<span class="option pull-right"><i class="fa fa-download"></i>&nbsp; Download</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" style="border-bottom: 1px solid #ddd; padding-bottom: 50px;">
+		<div class="row spotlight-details">
+			<div class="col-md-3 center-block">
+				<div class="placeholder-image"></div>
+			</div>
+			<div class="col-md-9">
+				<span class="date">Nov 29, 2014</span>
+				<h3>Episode 42: Latest Episode Spotlighted Here</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam laborum, placeat nam nostrum draco dormiens nunquam rerum a deserunt, iusto praesentium quaerat amet.</p>
+
+				<p><ul>
+					<li>Lorem ipsum dolor sit</li>
+					<li>Draco dormiens</li>
+					<li>Nunquam titillandus draco</li>
+					<li>Magnam laborum placeat</li>
+				</ul></p>
+			</div>
+		</div>
+	</div>
+
 	<div class="container">
-		<div class="row">
-			<div class="hidden-xs hidden-sm col-md-4 col-lg-4">
-				<img id="avatar" src="/images/meteor_circle2.png"/>
-			</div>
-			<div class="col-sm-12 col-md-8 col-lg-8 sub-form">
-				<h1>Get the best tips and tricks for Meteor.js delivered weekly to your inbox.</h1>
+		<!-- video archive list -->
+		<div class="episode-archive">
+			<div class="row">
+				<div class="col-md-7">
+					{{#each videos}}
+						<a href="{{url}}">
+							<div class="row episode {{#if upcoming}}upcoming{{/if}}">
 
-				<form class="form subscribe-form" role="form">
+								<div class="col-sm-12 col-md-12">
+									<span class="episode-title"><i class="fa fa-microphone"></i>&nbsp; Meteor Podcast</span>
+
+									<span class="episode-month">{{month}}</span>
+									<span class="episode-description">{{description}}</span>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</a>
+					{{/each}}
+				</div>
+
+				<div class="col-md-5">
 					<div class="row">
-						<div class="form-group col-xs-12 col-md-12 col-lg-6">
-							<label class="sr-only" for="exampleInputEmail2">Email address</label>
-							<input type="email" class="form-control" id="inputEmail" name="email" required placeholder="email address">
-						</div>
-						<div class="form-group col-xs-12 col-md-12 col-lg-6">
-							<label class="sr-only" for="exampleInputPassword2">Password</label>
-							<input type="name" class="form-control" id="inputName" name="fullName" required placeholder="name">
-						</div>
-					</div>
-					<div class="row">
-						<div class="radio col-xs-6 col-md-4 col-lg-4">
-						  <div class="radio-question">
-						  	<label>
-							    <input type="radio" name="optionsRadios" id="optionsRadios1" value="Yes" checked>
-							    <span>I'm an advanced Meteor.js developer.</span>
-							  </label>
-						  </div>
-						</div>
-						<div class="radio col-xs-6 col-md-5 col-lg-4">
-						  <div class="radio-question">
-						  	<label>
-							    <input type="radio" name="optionsRadios" id="optionsRadios2" value="No">
-							    <span>Actually, I'm just starting out with Meteor.</span>
-							  </label>
-						  </div>
-						</div>
-						<div class="col-xs-12 col-md-3 col-lg-4">
-							<button type="submit" class="btn btn-primary btn-block">subscribe</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-	</div>
+						<div class="col-md-12" style="background-color: #eee; padding: 10px 20px; height: 680px;">
 
-	<div class="resources container">
-		<div class="row title">
-			<div class="col-md-8">
-				<h1>Other Resources</h1>
+							<h4 style="margin: 20px 0 0 0;">About the Podcast</h4>
+							<p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo, aliquam libero temporibus consequuntur quaerat assumenda deserunt harum, quia, incidunt eaque cum quam adipisci vero quae commodi! Ea maiores, in?</p>
+
+							<h4 style="margin: 40px 0 0 0;">About the Hosts</h4>
+							<p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero laborum. Atque iure voluptate dolorum fugiat delectus quod, eaque sequi culpa dolor suscipit. Quaerat adipisci alias sunt veniam reiciendis ullam?</p>
+
+							<p>-</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellendus perspiciatis vitae explicabo quia dignissimos porro, excepturi. Suscipit labore minus illum assumenda facere blanditiis dignissimos quaerat, possimus fugiat iusto sit.</p>
+
+							<p>Will put some iTunes and Stitcher links/buttons down here that link out to the Meteor Podcast pages.</p>
+
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6">
-				<a href="http://meteorpodcast.com" target="_blank" class="resource">
-				<div class="row">
-					<div class="col-xs-2 col-sm-2 col-md-2 icon">
-						<i class="fa fa-4x fa-headphones"></i>
-					</div>
-					<div class="col-xs-10 col-sm-10 col-md-10">
-						<h3>Meteor Podcast</h3>
-						<p class="clean">A weekly news show that talks about all things happening in the Meteor.js universe.</p>
-					</div>
-				</div>
-				</a>
-			</div>
-
-			<div class="col-xs-12 col-sm-12 col-md-6">
-				<a href="{{pathFor 'learn'}}" class="resource">
-				<div class="row">
-					<div class="col-xs-2 col-sm-2 col-md-2 icon">
-						<i class="fa fa-4x fa-code"></i>
-					</div>
-					<div class="col-xs-10 col-sm-10 col-md-10">
-						<h3>Mastering Meteor.js Class</h3>
-						<p class="clean">Curious about Meteor? Tired of dabbling with this hot new technology and ready to dive deep? Learn how to build Meteor.js apps from scratch.</p>
-					</div>
-				</div>
-				</a>
+			<div class="col-md-7 pagination">
+				<a href="#">Older Episodes</a>
+				<!-- <a href="#" class="pull-right">Newer Episodes</a> -->
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6">
-				<!-- <a href="{{pathFor 'questions'}}" class="resource"> -->
-				<a href="https://www.youtube.com/watch?v=LqWbXQDXHC0" target="_blank" class="resource">
-				<div class="row">
-					<div class="col-xs-2 col-sm-2 col-md-2 icon">
-						<i class="fa fa-4x fa-youtube-play"></i>
-					</div>
 
-					<div class="col-xs-10 col-sm-10 col-md-10">
-						<h3>Meteor Club Q&amp;A</h3>
-						<p class="clean">Tune in every month with expert Josh Owens and special guests to learn about all things Meteor.js.</p>
-					</div>
-				</div>
-				</a>
-			</div>
-
-			<!-- josh, replace this with crater.io if you like -->
-			<div class="col-xs-12 col-sm-12 col-md-6">
-				<a href="{{pathFor 'testing'}}" target="_blank" class="resource">
-				<div class="row">
-					<div class="col-xs-2 col-sm-2 col-md-2 icon">
-						<i class="fa fa-4x fa-book"></i>
-					</div>
-
-					<div class="col-xs-10 col-sm-10 col-md-10">
-						<h3>Testing Meteor.js Class</h3>
-						<p class="clean">Automated testing is an important part of building robust web apps. Learn how to integrate testing into your Meteor.js coding practices.</p>
-					</div> 
-				</div>
-				</a>
+		<div class="row meteor-club">
+			<div class="col-md-12">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore harum enim quo ad maxime molestias eveniet laborum aperiam maiores, esse! Dignissimos laborum aut, quis sapiente aliquam quasi sit ex. Debitis. <a href="#">Click here to visit Meteor Club.</a></p>
 			</div>
 		</div>
 	</div>
