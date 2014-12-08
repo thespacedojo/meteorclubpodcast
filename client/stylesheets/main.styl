@@ -30,21 +30,26 @@ a
   
 .btn
   font-family roboto
-  font-size 20px
+  font-size 14px
   padding 11px 20px
-  font-weight 700
+  font-weight 500
+  text-transform uppercase
   letter-spacing 1px
+  -webkit-transition background .2s, color .2s ease-in-out
+  transition background .2s, color .2s ease-in-out
+  
+  &.push-down
+    margin-top 20px !important
 
   // default purple button
   &.btn-primary
-    background-color darken(#a685bd, 5%)
+    background-color darken(#a685bd, 55%)
     border 0
-    margin-top 3px
 
     &:hover
-      background-color darken(#a685bd, 15%) 
-      -webkit-transition background .1s ease-in-out
-      transition background .1s ease-in-out
+      background-color darken(#a685bd, 40%) 
+      -webkit-transition background .2s, color .2s ease-in-out
+      transition background .2s, color .2s ease-in-out
 
 h1,
 h2,
@@ -260,7 +265,7 @@ footer
 .podcast-hero
   margin 0
   height 400px
-  background-image url('../images/raw-bg2.jpg')
+  background-image url('../images/raw-bg3.jpg')
   background-size cover
   background-position 90% 55%
   padding 30px 0 10px
@@ -288,6 +293,10 @@ footer
     a
       opacity .9 !important
       color white
+  
+  .pod-logo
+    width 200px
+    height auto
 
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width 768px)
@@ -329,11 +338,19 @@ footer
     /* Large devices (large desktops, 1200px and up) */
     @media screen and (min-width 1200px)
       margin 20px 0
+  
+  &.small
+    height 100px
+    padding 16px 0
+    margin 0
+    
+    .pod-logo
+      width 140px
+      height auto
 
 .podcast-play
   background-color #eee
   height 70px
-  padding 25px 0
   
   h1,h2,h3,h4,h5,h6,p
     margin 0
@@ -344,8 +361,8 @@ footer
     overflow hidden  
     position absolute  
     left 65px
-    top 6px
-    width 850px 
+    top 31px
+    width 800px 
     height 10px 
     -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset  
     box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset 
@@ -353,7 +370,7 @@ footer
   .volume-bar
     position absolute
     right 10px  
-    top 6px  
+    top 31px  
     width 45px  
     height 8px  
     border-radius 20px 20px 20px 20px  
@@ -365,7 +382,7 @@ footer
   span.play
     font-size 28px
     position relative
-    bottom 9px
+    top 15px
     left 0 !important
     margin 0 !important
     padding 0
@@ -376,13 +393,23 @@ footer
     font-size 15px
     text-transform uppercase
     display inline
-    margin 0 20px 0
+    margin 0
+    padding 24.5px 20px
+    transition background .2s, color .2s ease-in-out
     
     &:first-child
       margin 0 0 0
+    
+    &:hover
+      background #0f0e23
+      color white
+      cursor pointer
+      transition background .2s, color .2s ease-in-out
 
 .spotlight-details
-  margin 60px 0 0
+  // padding 60px 0 50px
+  padding-top 60px
+  padding-bottom 50px
   span.date
     margin 0
   h3
@@ -391,9 +418,46 @@ footer
     margin 0
   .placeholder-image
     background #eee
+    background-size cover
     width 200px
     height 200px
     border-radius 50%
+    span.num
+      font-size 80px
+      position relative
+      top 40px
+      display block
+      font-weight 700
+      
+  ul.episode-options
+    list-style-type none
+    width auto
+    margin 0
+    padding 0
+    
+    li
+      border-bottom 1px solid #eee
+      margin 0
+      padding 10px 8px
+      font-size 14px
+      
+      // &.active
+      //   background #0f0e23
+      //   color white
+      //   a
+      //     color white
+      
+      a
+        color #444
+        &:hover
+          text-decoration none
+      
+      &:last-child
+        border none
+        
+      &:hover
+        background-color #eee
+        cursor pointer
   span.date
     font-size 15px
     color #888
@@ -451,38 +515,46 @@ footer
     /* Medium devices (desktops, 992px and up) */
     @media screen and (min-width 992px)
       padding 30px 20px
-
-   
-.social-links
-  margin-top 40px
-  a
-    color #615082
-    background-color white
-    -webkit-border-radius 25px
-    -moz-border-radius 25px
-    border-radius 25px
-    display inline-block
-    height 50px
-    width 50px
-    
-    &:hover
-      background-color #a279b9
-      transition background-color .1s
-    
-    i
-      position relative
-      top 12px
-      &.fa-twitter
-        left 13px
-      &.fa-youtube-play
-        left 11px
-      &.fa-github
-        left 13px
-
         
 
+.info-panel
+  height 740px
+  // background-color lighten(#eee, 2%)
+  // background #0f0e23
+  background #f2f2f2
+  // background url('/images/raw-bg4.jpg')
+  // background-size cover
+  // background-position 70% 100%
+  // color white
+  padding 10px 20px 10px 30px
+  // border-bottom 1px solid #0f0e23
+  // border-right 1px solid #0f0e23
+  
+  h4
+    margin 20px 0 0
+    padding 0 
+  
+  // p
+  //   color white
+  //   opacity .65 
+  //   margin 0
+  
+  .podcast-hosts
+    padding 20px 0 40px
+    margin 30px 0
+    // border-top 1px solid #ddd
+    // border-bottom 1px solid #ddd
+    
+    .host
+      margin-top 20px
+      
+      img
+        border-radius 50%
+        width 80%
+
 .episode-archive
-  margin 0 0 5px
+  margin 0
+  // border-top 1px solid #ddd
   
   a:hover
     text-decoration none
@@ -492,7 +564,19 @@ footer
     transition background .2s
     position relative
     border-bottom 1px solid #ddd
-  
+    // background #0f0e23
+    border-left 1px solid #ddd
+    border-right 1px solid #ddd
+    border-top none
+    height 185px
+      
+    &:hover
+      // background #eee
+      transition background .2s ease-in-out
+    
+      span.episode-month
+        color blue
+        transition color .2s
 
     span.episode-month, span.episode-description
       margin-top 0
@@ -509,6 +593,7 @@ footer
       margin 5px 0 7px 0
       display block
       color #3a3b47
+      transition color .2s
 
     span.episode-description
       line-height 1.75
@@ -529,7 +614,24 @@ footer
   margin 20px 0 60px
 
 .pagination
-  padding 0 30px
+  padding 15px 25px
+  margin 0
+  border-radius 0
+  text-transform uppercase
+  font-size 14px
+  // background #eee
+  background #0f0e23
+  color white
+  font-weight 500
+  letter-spacing 1px
+  
+  &.two
+    color white
+    background #666
+
+  a
+    &:hover
+      text-decoration none
 
 
 /* TRANSCRIPTION PAGE */  

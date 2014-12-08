@@ -3,10 +3,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12 center-block">
+					<img src="/images/podlogo7.png" class="pod-logo" alt="">
 					<h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
 					<span class="tagline">Hosted by <a href="#">Josh Owens</a> and <a href="#">Ry Walker</a>. Part of <a href="#">Meteor Club</a>.</span>
 
-					<h3><i class="fa fa-chevron-circle-down fa-2x" style="color: white;"></i></h3>
+					<!-- <h3><i class="fa fa-chevron-circle-down fa-2x" style="color: white;"></i></h3> -->
 				</div>
 			</div>
 
@@ -32,15 +33,20 @@
 		</div>
 	</div>
 
-	<div class="container" style="border-bottom: 1px solid #ddd; padding-bottom: 50px;">
-		<div class="row spotlight-details">
-			<div class="col-md-3 center-block">
-				<div class="placeholder-image"></div>
+	<div class="container spotlight-details">
+		<div class="row">
+			<div class="col-md-3">
+				<ul class="episode-options">
+					<li class="active"><a href="#"><i class="fa fa-file-text fa-fw"></i>&nbsp; Read Transcript</a></li>
+					<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp; iTunes</a></li>
+					<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a></li>
+					<li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp; Stitcher</a></li>
+				</ul>
 			</div>
 			<div class="col-md-9">
 				<span class="date">Nov 29, 2014</span>
 				<h3>Episode 42: Latest Episode Spotlighted Here</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam laborum, placeat nam nostrum draco dormiens nunquam rerum a deserunt, iusto praesentium quaerat amet.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam laborum, placeat nam nostrum draco dormiens nun quam rerum a deserunt, iusto praesentium quaerat amet. Deserunt quidem iusto fugit debitis fugiat reicien idinis qua laborum eaque natus velit facere eos necessitatibus quae obcaecati alias, dicta, quo et, iste?</p>
 
 				<p><ul>
 					<li>Lorem ipsum dolor sit</li>
@@ -48,63 +54,71 @@
 					<li>Nunquam titillandus draco</li>
 					<li>Magnam laborum placeat</li>
 				</ul></p>
+
 			</div>
 		</div>
 	</div>
 
 	<div class="container">
+		<div class="row">
+			<div class="col-md-12 pagination two">
+				More Episodes
+			</div>
+		</div>
+	</div>
+
+	<!-- TODO: container-full? -->
+	<div class="container">
 		<!-- video archive list -->
-		<div class="episode-archive">
-			<div class="row">
-				<div class="col-md-7">
-					{{#each videos}}
-						<a href="{{url}}">
-							<div class="row episode {{#if upcoming}}upcoming{{/if}}">
+		<div class="row">
+			<div class="col-md-7 episode-archive">
+				{{#each videos}}
+					<a href="{{url}}">
+						<div class="row episode {{#if upcoming}}upcoming{{/if}}">
 
-								<div class="col-sm-12 col-md-12">
-									<span class="episode-title"><i class="fa fa-microphone"></i>&nbsp; Meteor Podcast</span>
+							<div class="col-sm-12 col-md-12">
+								<span class="episode-title"><i class="fa fa-microphone"></i>&nbsp; Meteor Podcast | 457 plays</span>
 
-									<span class="episode-month">{{month}}</span>
-									<span class="episode-description">{{description}}</span>
-								</div>
-								<div class="clearfix"></div>
+								<span class="episode-month">{{month}}</span>
+								<span class="episode-description">{{description}}</span>
 							</div>
-						</a>
-					{{/each}}
-				</div>
-
-				<div class="col-md-5">
-					<div class="row">
-						<div class="col-md-12" style="background-color: #eee; padding: 10px 20px; height: 680px;">
-
-							<h4 style="margin: 20px 0 0 0;">About the Podcast</h4>
-							<p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis nemo, aliquam libero temporibus consequuntur quaerat assumenda deserunt harum, quia, incidunt eaque cum quam adipisci vero quae commodi! Ea maiores, in?</p>
-
-							<h4 style="margin: 40px 0 0 0;">About the Hosts</h4>
-							<p style="margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero laborum. Atque iure voluptate dolorum fugiat delectus quod, eaque sequi culpa dolor suscipit. Quaerat adipisci alias sunt veniam reiciendis ullam?</p>
-
-							<p>-</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam repellendus perspiciatis vitae explicabo quia dignissimos porro, excepturi. Suscipit labore minus illum assumenda facere blanditiis dignissimos quaerat, possimus fugiat iusto sit.</p>
-
-							<p>Will put some iTunes and Stitcher links/buttons down here that link out to the Meteor Podcast pages.</p>
-
+							<div class="clearfix"></div>
 						</div>
+					</a>
+				{{/each}}
+			</div>
+
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-12 info-panel">
+						<h4 style="margin: 20px 0 0 0;">About the Podcast</h4>
+						<p style="margin-top: 10px;">Meteor Podcast takes an in-depth look at the up-and-coming Meteor.js framework. Join hosts Josh Owens and Ry Walker as they discover more.</p>
+
+						<div class="podcast-hosts">
+							<div class="row host">
+								<div class="col-md-6 center-block">
+									<img src="/images/josh.png" alt="">
+									<h4>Josh Owens</h4>
+									<i class="fa fa-twitter"></i> <i class="fa fa-stack-overflow"></i>
+								</div>
+								<div class="col-md-6 center-block">
+									<img src="/images/ry.png" alt="">
+									<h4>Ry Walker</h4>
+									<i class="fa fa-twitter"></i> <i class="fa fa-stack-overflow"></i>
+								</div>
+							</div>
+						</div>
+
+						<p>Will put some iTunes and Stitcher links/buttons down here that link out to the Meteor Podcast pages.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-7 pagination">
-				<a href="#">Older Episodes</a>
+			<div class="col-md-12 pagination">
+				<a class="older" href="#"><i class="fa fa-angle-left fa-fw"></i>&nbsp;Older Episodes</a>
 				<!-- <a href="#" class="pull-right">Newer Episodes</a> -->
-			</div>
-		</div>
-
-		<div class="row meteor-club">
-			<div class="col-md-12">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore harum enim quo ad maxime molestias eveniet laborum aperiam maiores, esse! Dignissimos laborum aut, quis sapiente aliquam quasi sit ex. Debitis. <a href="#">Click here to visit Meteor Club.</a></p>
 			</div>
 		</div>
 	</div>
