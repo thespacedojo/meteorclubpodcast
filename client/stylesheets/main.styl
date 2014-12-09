@@ -1,6 +1,7 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,400italic,300italic")
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,400italic,300italic|Droid+Serif:400,400italic")
 
 roboto = "Roboto", sans-serif;
+droid = "Droid Serif", serif;
 
 *
   margin 0
@@ -77,6 +78,10 @@ p
 
   &.clean
     margin 0
+  
+  &.small
+    font-size 14px
+    line-height 1.75
 
 ul
   line-height 1.75
@@ -250,7 +255,7 @@ footer
   left 0
   bottom 0
   width 100%
-  background-color #f2f2f2
+  background-color #fff
   height 55px
   bottom 0
   
@@ -264,12 +269,11 @@ footer
 
 .podcast-hero
   margin 0
-  height 400px
+  height 310px
   background-image url('../images/raw-bg3.jpg')
   background-size cover
   background-position 90% 55%
-  padding 30px 0 10px
-  // position relative
+  padding 50px 0 0
   
   .container
     position relative
@@ -277,22 +281,30 @@ footer
   
   .latest-episode
     position absolute
-    bottom 10px
+    bottom 0px
     left 15px
     color white
     font-size 15px
     text-transform uppercase
     letter-spacing 1px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
+      bottom 10px
   
   span.tagline
     font-style oblique
-    color white
-    opacity .7
+    font-family droid
+    color #b0b0b6
     font-size 16px
     
     a
-      opacity .9 !important
       color white
+      border-bottom 1px solid darken(#b0b0b6, 30%)
+      padding-bottom 1px
+      
+      &:hover
+        text-decoration none
   
   .pod-logo
     width 200px
@@ -300,13 +312,13 @@ footer
 
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width 768px)
-    height 500px
-    padding 45px 0
+    height 340px
+    padding 55px 0 0
 
   /* Medium devices (desktops, 992px and up) */
   @media screen and (min-width 992px)
-    height 470px 
-    padding 80px 0
+    height 400px 
+    padding 80px 0 0
 
   /* Large devices (large desktops, 1200px and up) */
   @media screen and (min-width 1200px)
@@ -319,11 +331,11 @@ footer
 
     /* Small devices (tablets, 768px and up) */
     @media screen and (min-width 768px)
-      font-size 32px
+      font-size 38px
 
     /* Medium devices (desktops, 992px and up) */
     @media screen and (min-width 992px)
-      font-size 32px 
+      font-size 40px 
 
     /* Large devices (large desktops, 1200px and up) */
     @media screen and (min-width 1200px)
@@ -345,39 +357,43 @@ footer
     margin 0
     
     .pod-logo
-      width 140px
+      width 100px
       height auto
+      
+      /* Medium devices (desktops, 992px and up) */
+      @media screen and (min-width: 992px) 
+        width 140px
 
 .podcast-play
-  background-color #eee
+  background-color #e9e8ef
   height 70px
   
   h1,h2,h3,h4,h5,h6,p
     margin 0
   
   .progress-bar
-    background-color #ddd
+    background-color darken(#e9e8ef, 7%)
     border-radius 20px 20px 20px 20px  
     overflow hidden  
     position absolute  
     left 65px
     top 31px
-    width 800px 
+    width 300px 
     height 10px 
     -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset  
     box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset 
     
-  .volume-bar
-    position absolute
-    right 10px  
-    top 31px  
-    width 45px  
-    height 8px  
-    border-radius 20px 20px 20px 20px  
-    -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.1) inset  
-    box-shadow 0 1px 1px 0 rgba(0,0,0,0.1) inset  
-    background-color #992E18  
-    overflow hidden
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width: 768px) 
+      width 475px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
+      width 645px
+    
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width: 1200px)
+      width 895px
   
   span.play
     font-size 28px
@@ -390,7 +406,9 @@ footer
     color #555
   
   span.option
-    font-size 15px
+    font-size 14px
+    font-weight 500
+    letter-spacing 1px
     text-transform uppercase
     display inline
     margin 0
@@ -407,13 +425,21 @@ footer
       transition background .2s, color .2s ease-in-out
 
 .spotlight-details
-  // padding 60px 0 50px
-  padding-top 60px
-  padding-bottom 50px
-  span.date
-    margin 0
+  padding-top 50px
+  padding-bottom 40px
+  
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (min-width: 768px) 
+    padding-top 70px
+    padding-bottom 60px
+  
+  /* Medium devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) 
+    padding-top 80px
+    padding-bottom 60px
   h3
     margin 7px 0
+    font-size 28px
   p
     margin 0
   .placeholder-image
@@ -422,14 +448,25 @@ footer
     width 200px
     height 200px
     border-radius 50%
+    text-align center
     span.num
       font-size 80px
       position relative
       top 40px
       display block
       font-weight 700
-      
-  ul.episode-options
+    
+  span.date
+    font-size 15px
+    color #888
+    text-transform uppercase
+    letter-spacing 1px
+    margin 0 0 5px
+
+  .transcript
+    margin 20px 0
+
+ul.episode-options
     list-style-type none
     width auto
     margin 0
@@ -440,6 +477,7 @@ footer
       margin 0
       padding 10px 8px
       font-size 14px
+      transition background .2s, color .2s ease-in-out
       
       // &.active
       //   background #0f0e23
@@ -449,6 +487,7 @@ footer
       
       a
         color #444
+        transition color .2s ease-in-out
         &:hover
           text-decoration none
       
@@ -456,14 +495,13 @@ footer
         border none
         
       &:hover
-        background-color #eee
+        background #0f0e23
         cursor pointer
-  span.date
-    font-size 15px
-    color #888
-    text-transform uppercase
-    letter-spacing 1px
-      
+        transition background .2s ease-in-out      
+        a
+          color white
+          transition color .2s ease-in-out
+           
 .resources
   margin 30px auto 120px
 
@@ -521,23 +559,24 @@ footer
   height 740px
   // background-color lighten(#eee, 2%)
   // background #0f0e23
-  background #f2f2f2
-  // background url('/images/raw-bg4.jpg')
-  // background-size cover
-  // background-position 70% 100%
-  // color white
-  padding 10px 20px 10px 30px
+  // background darken(#27263e, 5%)
+  background url('/images/raw-bg9.jpg')
+  background-size cover
+  background-position 0% 100%
+  border-radius 0px
+  color white
+  padding 15px 35px 15px
   // border-bottom 1px solid #0f0e23
-  // border-right 1px solid #0f0e23
+  border-right 1px solid #0f0e23
   
   h4
     margin 20px 0 0
     padding 0 
   
-  // p
-  //   color white
-  //   opacity .65 
-  //   margin 0
+  p
+    color white
+    opacity .7 
+    margin 0
   
   .podcast-hosts
     padding 20px 0 40px
@@ -551,6 +590,11 @@ footer
       img
         border-radius 50%
         width 80%
+      
+      i
+        font-size 16px
+        margin 10px 5px 0 0
+        opacity .6
 
 .episode-archive
   margin 0
@@ -564,24 +608,28 @@ footer
     transition background .2s
     position relative
     border-bottom 1px solid #ddd
-    // background #0f0e23
-    border-left 1px solid #ddd
-    border-right 1px solid #ddd
+    background #f2f2f2
+    border-left 1px solid #0f0e23
+    border-right 1px solid #0f0e23
     border-top none
     height 185px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
+      border-right 1px solid #fff
       
     &:hover
-      // background #eee
+      background #ddd
       transition background .2s ease-in-out
     
       span.episode-month
-        color blue
+        color lighten(#2e273d, 20%)
         transition color .2s
 
     span.episode-month, span.episode-description
       margin-top 0
   
-    span.episode-title
+    span.episode-plays
       color #333
       opacity .5
       margin 0 0 3px 0
@@ -613,21 +661,59 @@ footer
 .meteor-club
   margin 20px 0 60px
 
-.pagination
-  padding 15px 25px
+.dark-bar
+  padding 15px 25px !important
   margin 0
   border-radius 0
   text-transform uppercase
   font-size 14px
-  // background #eee
   background #0f0e23
   color white
   font-weight 500
   letter-spacing 1px
+  min-height 50px
+  
+  border-bottom-left-radius 3px
+  border-bottom-right-radius 3px
+  
+  a
+    color white
+    
+    &:hover
+      opacity .7
   
   &.two
     color white
-    background #666
+    // background #666
+    background #0f0e23
+    padding 18px 30px 15px !important
+    border-top-left-radius 3px
+    border-top-right-radius 3px
+    border-bottom-left-radius 0px
+    border-bottom-right-radius 0px
+    
+    span.more
+      opacity .85
+    
+  
+  .podcast-social
+    display inline
+    color white
+    letter-spacing 1px
+    font-weight 500
+    font-size 14px
+    position relative
+    bottom 2px
+    
+    li
+      display inline
+      
+      a
+        color white
+        opacity 1
+        
+        &:hover
+          opacity .7
 
   a
     &:hover
@@ -636,12 +722,22 @@ footer
 
 /* TRANSCRIPTION PAGE */  
 .transcription
-  padding 40px 0 80px
+  padding 60px 15px 80px
   
   .embed-responsive
     margin 20px 0 60px 0
     border 3px solid #000
     border-radius 5px
+  
+  span.date
+    font-size 15px
+    color #888
+    text-transform uppercase
+    letter-spacing 1px
+    margin 0
+  
+  h2
+    margin 10px 0
 
 
 /* * *
