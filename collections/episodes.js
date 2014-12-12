@@ -1,0 +1,1 @@
+Episodes = new Mongo.Collection('episodes');

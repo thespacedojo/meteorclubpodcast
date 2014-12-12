@@ -279,19 +279,6 @@ footer
     position relative
     height 100%
   
-  .latest-episode
-    position absolute
-    bottom 0px
-    left 15px
-    color white
-    font-size 15px
-    text-transform uppercase
-    letter-spacing 1px
-    
-    /* Medium devices (desktops, 992px and up) */
-    @media screen and (min-width: 992px) 
-      bottom 10px
-  
   span.tagline
     font-style oblique
     font-family droid
@@ -364,22 +351,40 @@ footer
       @media screen and (min-width: 992px) 
         width 140px
 
+.latest-episode
+  color white
+  opacity .7
+  font-size 13px
+  text-transform uppercase
+  letter-spacing 1px
+  margin-top 17px
+    
 .podcast-play
-  background-color #e9e8ef
-  height 70px
+  background-color #0f0e23
+  color white
+  height 80px
+  padding 0 !important
+  
+  &.affix
+    display block
+    z-index 1111111
+    position fixed
+    top 0
+    left 0
+    right 0
   
   h1,h2,h3,h4,h5,h6,p
     margin 0
   
   .progress-bar
-    background-color darken(#e9e8ef, 7%)
+    background-color #2b2a41
     border-radius 20px 20px 20px 20px  
     overflow hidden  
     position absolute  
-    left 65px
-    top 31px
+    left 50px
+    top 47px
     width 300px 
-    height 10px 
+    height 8px 
     -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset  
     box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset 
     
@@ -394,29 +399,51 @@ footer
     /* Large devices (large desktops, 1200px and up) */
     @media screen and (min-width: 1200px)
       width 895px
+    
+  .volume-bar
+    background-color #2b2a41
+    border-radius 20px 20px 20px 20px  
+    overflow hidden  
+    position absolute  
+    right 0
+    top 47px
+    width 55px 
+    height 8px 
+    -webkit-box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset  
+    box-shadow 0 1px 1px 0 rgba(0,0,0,0.2) inset 
+    
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width: 768px) 
+      width 55px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
+      width 55px
+    
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width: 1200px)
+      width 75px
+      right 125px
   
   span.play
-    font-size 28px
+    font-size 18px
     position relative
-    top 15px
-    left 0 !important
+    top 3px
+    left 1px
     margin 0 !important
     padding 0
     display inline
-    color #555
+    color white
   
   span.option
     font-size 14px
     font-weight 500
     letter-spacing 1px
     text-transform uppercase
-    display inline
-    margin 0
-    padding 24.5px 20px
+    background-color red
+    // margin 0
+    padding 28px 20px
     transition background .2s, color .2s ease-in-out
-    
-    &:first-child
-      margin 0 0 0
     
     &:hover
       background #0f0e23
@@ -457,11 +484,17 @@ footer
       font-weight 700
     
   span.date
-    font-size 15px
-    color #888
-    text-transform uppercase
-    letter-spacing 1px
-    margin 0 0 5px
+    font-style oblique
+    font-family droid
+    color darken(#b0b0b6, 20%)
+    font-size 16px
+  
+  .btn-subtle
+    background-color #e9e8ef
+    color darken(#b0b0b6, 20%)
+    
+    &:hover
+      color darken(#b0b0b6, 65%)
 
   .transcript
     margin 20px 0
@@ -556,7 +589,7 @@ ul.episode-options
         
 
 .info-panel
-  height 740px
+  height 800px
   // background-color lighten(#eee, 2%)
   // background #0f0e23
   // background darken(#27263e, 5%)
@@ -604,7 +637,7 @@ ul.episode-options
     text-decoration none
   
   .episode
-    padding 30px 15px
+    padding 24px 15px
     transition background .2s
     position relative
     border-bottom 1px solid #ddd
@@ -612,7 +645,7 @@ ul.episode-options
     border-left 1px solid #0f0e23
     border-right 1px solid #0f0e23
     border-top none
-    height 185px
+    height 160px
     
     /* Medium devices (desktops, 992px and up) */
     @media screen and (min-width: 992px) 
@@ -621,6 +654,7 @@ ul.episode-options
     &:hover
       background #ddd
       transition background .2s ease-in-out
+      cursor pointer
     
       span.episode-month
         color lighten(#2e273d, 20%)
@@ -637,11 +671,12 @@ ul.episode-options
       font-size 15px
       
     span.episode-month
-      font-size 24px
-      margin 5px 0 7px 0
+      font-size 22px
+      margin 5px 0 3px 0
       display block
       color #3a3b47
       transition color .2s
+      font-weight 500
 
     span.episode-description
       line-height 1.75
