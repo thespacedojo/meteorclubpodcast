@@ -29,7 +29,7 @@ if (Episodes.find().count() === 0) {
   Episodes.insert({
     title: "Episode 38: Lorem ipsum dolor",
     date: 'October 27, 2014',
-    description: "Join Josh Owens and special guest-host Gerard Sychay as they talk about all the latest Meteor.js new this week."
+    description: "Join Josh Owens and special guest co-host Chris Nelson as they talk about all the Meteor news this week, including Node Forking, the Post-1.0 Meteor Roadmap, top mistakes Meteor devs make, data from scraping a bunch of Meteor apps, and Meteor + Polymer."
   });
 
   Episodes.insert({
