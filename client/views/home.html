@@ -25,6 +25,7 @@
 									{{#with featured}}
 									<span id="episode-title" class="pull-left">{{title}}</span>
 									
+									<!-- replace with actual episode time -->
 									<span id="time-remaining" class="hidden-xs pull-right">0:00 / 42:53</span>
 									{{/with}}
 								</div>
@@ -33,6 +34,8 @@
 
 						<div class="row">
 							<div class="col-lg-12">
+
+								<!-- i don't have anything styled for this bar filling up. just the basic bar is in place. -->
 								<div class="progress-bar"></div>
 							</div>
 						</div>
@@ -43,6 +46,7 @@
 	</div>
 
 	<div class="featured-area">
+		<!-- clicked episode -->
 		{{> featuredArea featured}}
 	</div>
 
@@ -50,10 +54,13 @@
 		<div class="row">
 			<div class="col-md-12 dark-bar two">
 				<div class="row">
+
 					<div class="hidden-xs col-sm-3 col-md-4">
 						<span class="more">Latest Episodes</span>
 					</div>
+
 					<div class="col-xs-12 col-sm-9">
+						<!-- only shows up on tablets and smaller -->
 						<ul class="podcast-social visible-xs visible-sm">
 							<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
 							<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
@@ -66,8 +73,9 @@
 	</div>
 
 	<div class="container">
-		<!-- episode list -->
 		<div class="row">
+
+			<!-- episode loop -->
 			<div class="col-md-7 episode-archive">
 				{{#each episodes}}
 					<div class="row episode" id="{{_id}}">
@@ -87,6 +95,8 @@
 			<div class="col-md-5 hidden-sm hidden-xs">
 				<div class="row">
 					<div class="col-md-12 info-panel">
+
+						<!-- links out -->
 						<h4 style="margin: 20px 0 0 0;">Around the Web</h4>
 						<div class="row">
 							<div class="col-md-6">
@@ -104,6 +114,7 @@
 							</div>
 						</div>
 
+						<!-- about the podcast -->
 						<div class="row">
 							<div class="col-md-12">
 								<h4 style="margin: 40px 0 0 0;">About the Podcast</h4>
@@ -127,18 +138,23 @@
 								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
+
 		</div>
 
+		<!-- older and newer episode pages -->
 		<div class="row">
 			<div class="col-md-12 dark-bar">
 				<a class="older pull-left" href="#"><i class="fa fa-angle-left fa-fw"></i>&nbsp;Older</a> 
 
+				<!-- need to hide this on first page of episodes -->
 				<a class="newer pull-right" href="#">Newer <i class="fa fa-angle-right fa-fw"></i></a>
 			</div>
 		</div>
+
 	</div>
 
 	<div class="modal fade" id="transcript-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -147,43 +163,20 @@
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 	      </div>
+
 	      <div class="modal-body">
+
+	      	<!-- YOUR TRANSCRIPT GOES HERE -->
 	      	<h2>Episode 42: Node Forking Edition</h2>
 	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis aspernatur temporibus numquam sunt, inventore modi quis eos fugiat aliquam, necessitatibus a illo voluptate veniam. Inventore nisi alias corrupti, cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ad cupiditate, nihil aut error aliquid autem repudiandae. Sunt laboriosam culpa, vel voluptate dolore repellat distinctio ad. Ducimus nesciunt, rem necessitatibus.</p>
 
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aspernatur libero consequuntur. Nobis, cumque ea, obcaecati dolorum aliquam eligendi pariatur facere, atque laborum deserunt mollitia voluptatem, illum veritatis nisi dolore?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A hic sit neque vel nulla nisi illum consequatur ipsam, dolore non molestias, iure sed soluta architecto ex inventore facilis doloribus quasi.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed pariatur inventore quia exercitationem, odio consequuntur, mollitia, tempore rerum, excepturi illum rem perferendis impedit minus dignissimos officia dolores necessitatibus. Assumenda, nam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ut aperiam, hic. Et nisi inventore, odio eius obcaecati, eligendi necessitatibus provident rerum sequi omnis, similique laborum. Veritatis nam expedita, distinctio!</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo beatae repellendus neque impedit ducimus totam adipisci perspiciatis amet autem distinctio suscipit sunt, inventore, nesciunt provident commodi dolore vero accusamus.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi assumenda repudiandae perferendis aspernatur totam ad, temporibus obcaecati, eos aperiam odio ullam similique, dolorem voluptate. Beatae eius dolores animi mollitia eum?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aspernatur libero consequuntur. Nobis, cumque ea, obcaecati dolorum aliquam eligendi pariatur facere, atque laborum deserunt mollitia voluptatem, illum veritatis nisi dolore?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A hic sit neque vel nulla nisi illum consequatur ipsam, dolore non molestias, iure sed soluta architecto ex inventore facilis doloribus quasi.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed pariatur inventore quia exercitationem, odio consequuntur, mollitia, tempore rerum, excepturi illum rem perferendis impedit minus dignissimos officia dolores necessitatibus. Assumenda, nam?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo beatae repellendus neque impedit ducimus totam adipisci perspiciatis amet autem distinctio suscipit sunt, inventore, nesciunt provident commodi dolore vero accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptas, dolorum deserunt cum atque incidunt iste recusandae. Saepe beatae quisquam dolorem soluta! Molestias provident labore nostrum sed perferendis optio tenetur.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi assumenda repudiandae perferendis aspernatur totam ad, temporibus obcaecati, eos aperiam odio ullam similique, dolorem voluptate. Beatae eius dolores animi mollitia eum?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima aspernatur libero consequuntur. Nobis, cumque ea, obcaecati dolorum aliquam eligendi pariatur facere, atque laborum deserunt mollitia voluptatem, illum veritatis nisi dolore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, eaque, alias! Excepturi, culpa enim atque accusantium a. Hic eos nulla placeat, assumenda quae earum nisi perferendis culpa in vero asperiores.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A hic sit neque vel nulla nisi illum consequatur ipsam, dolore non molestias, iure sed soluta architecto ex inventore facilis doloribus quasi.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed pariatur inventore quia exercitationem, odio consequuntur, mollitia, tempore rerum, excepturi illum rem perferendis impedit minus dignissimos officia dolores necessitatibus. Assumenda, nam?</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam explicabo beatae repellendus neque impedit ducimus totam adipisci perspiciatis amet autem distinctio suscipit sunt, inventore, nesciunt provident commodi dolore vero accusamus.</p>
-
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi assumenda repudiandae perferendis aspernatur totam ad, temporibus obcaecati, eos aperiam odio ullam similique, dolorem voluptate. Beatae eius dolores animi mollitia eum?</p>
+	        
 	      </div>
+
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
+	      
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
