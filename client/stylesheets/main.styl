@@ -424,9 +424,6 @@ footer
   
   span.play
     font-size 24px
-    // position relative
-    // top 3px
-    // left 1px
     margin-top 20px
     padding 0
     display inline
@@ -521,95 +518,7 @@ footer
 
   .transcript
     margin 20px 0
-
-ul.episode-options
-    list-style-type none
-    width auto
-    margin 0
-    padding 0
-    
-    li
-      border-bottom 1px solid #eee
-      margin 0
-      padding 10px 8px
-      font-size 14px
-      transition background .2s, color .2s ease-in-out
-      
-      // &.active
-      //   background #0f0e23
-      //   color white
-      //   a
-      //     color white
-      
-      a
-        color #444
-        transition color .2s ease-in-out
-        &:hover
-          text-decoration none
-      
-      &:last-child
-        border none
-        
-      &:hover
-        background #0f0e23
-        cursor pointer
-        transition background .2s ease-in-out      
-        a
-          color white
-          transition color .2s ease-in-out
            
-.resources
-  margin 30px auto 120px
-
-  .title
-    margin-bottom 30px !important
-    h1
-      text-transform lowercase
-  
-  i
-    font-size 48px
-    position relative
-    top 4px
-    opacity .3
-    color #232438
-
-  h3
-    margin-top 0
-
-  .row
-    margin-bottom 0
-
-    /* Medium devices (desktops, 992px and up) */
-    @media screen and (min-width 992px)
-      margin-bottom 50px
-  
-
-    &:last-child
-      margin-bottom 0
-  
-  a.resource
-    -webkit-border-radius 10px
-    -moz-border-radius 10px
-    border-radius 10px
-    display block
-    padding 20px 10px
-    &:hover
-      background-color #f2f2f2
-      transition background .2s ease-in-out
-  
-    h3
-      color #333
-  
-    p
-      color #555
-  
-    .icon
-      text-align center
-  
-    /* Medium devices (desktops, 992px and up) */
-    @media screen and (min-width 992px)
-      padding 30px 20px
-        
 
 .info-panel
   height 800px
@@ -675,6 +584,7 @@ ul.episode-options
         display block
         font-size 12px
         margin-top 5px
+
 
 .episode-list
   margin-top -217px
@@ -751,18 +661,6 @@ ul.episode-options
       /* Large devices (large desktops, 1200px and up) */
       @media screen and (min-width: 1200px)
         font-size 16px
-    
-    .video-thumbnail
-      width 100%
-      border-radius 5px
-      margin 0 0 20px 0
-      
-      /* Small devices (tablets, 768px and up) */
-      @media screen and (min-width: 768px) 
-        margin 0
-
-.meteor-club
-  margin 20px 0 60px
 
 .dark-bar
   padding 15px 25px !important
@@ -829,6 +727,7 @@ ul.episode-options
     &:hover
       text-decoration none
 
+
 #transcript-modal
   z-index 22222222
   .modal-body
@@ -836,149 +735,11 @@ ul.episode-options
   .modal-header
     border none
 
-/* TRANSCRIPTION PAGE */  
-.transcription
-  padding 60px 15px 80px
-  
-  .embed-responsive
-    margin 20px 0 60px 0
-    border 3px solid #000
-    border-radius 5px
-  
-  span.date
-    font-size 15px
-    color #888
-    text-transform uppercase
-    letter-spacing 1px
-    margin 0
-  
-  h2
-    margin 10px 0
-
-
-/* * *
-06 OPEN SOURCE -------------------------------------------------------------
-* * */
-      
-.about-package
-   margin 80px auto 150px
-  
-   ul.package-nav
-     list-style-type none
-     margin 0
-     padding 0
-     
-     li
-       padding 5px 12px
-       border-radius 5px
-       
-       &.active
-         background-color #f2f2f2        
 
 
 /* * *
 05 MISC --------------------------------------------------------------------
 * * */
-
-// heroes
-.hero
-  h1, h2, h3, h4, h5, h6
-    color white
-  &.one
-    padding 50px 0 80px
-    background-image url('../images/bg6.jpg')
-    background-size cover
-    background-position 20% 80%
-    color white
-    text-align center 
-
-    h1, h2, p
-      color white
-    
-    &.alt
-      background-image url('../images/bg7.jpg')
-  &.two
-    padding 80px 0 85px
-    background-image url('/images/bg5.jpg')
-    background-position 80% 50%
-    background-repeat no-repeat
-    background-size cover
-    margin 0
-
-    h1, h2
-      margin 60px 0 0
-      font-size 42px
-
-      /* Medium devices (desktops, 992px and up) */
-      @media screen and (min-width 992px)
-        margin 0
-
-      /* Large devices (large desktops, 1200px and up) */
-      @media screen and (min-width 1200px)
-        margin 20px 0  
-
-    h4
-      font-weight 700
-
-    p
-      color #b9bacb
-      
-      a
-        color white
-
-    span.version
-      font-weight 700
-      display block
-      color white
-      font-size 18px
-      margin 0 0 20px 0
-    
-    .embed-responsive iframe
-      border 4px solid #000
-      border-radius 5px
-    
-    .btn-default
-      border 0
-      margin-top 3px
-  
-  // alt background for opensource package page
-  &.opensource
-    background-image url('../images/bg7.jpg') !important
-
-// wells
-.well
-  margin 40px 0
-  background-color #232438 !important
-  border none !important
-
-  p
-    margin 0
-    color white !important
-    font-weight 500
-    
-  .fa
-    float left
-    margin 0 25px 0 5px
-    color white
-    opacity .3
-    position relative
-    top 8px
-  
-  a
-    color #afb0c0
-    text-decoration underline
-
-
-// thank you styles
-.thanks
-  padding 160px 0
-  text-align center
-
-  h2 
-    line-height 1.4
-  i
-    opacity .2
-
 
 .center-block
   display block
@@ -986,52 +747,6 @@ ul.episode-options
   text-align center
   
 
-// email capture usable anywhere
-.email-subscribe
-  margin-top 50px
-  padding-top 30px
-  border-top 1px solid #ddd
-  
-  .subscribe-form
-    margin-top 40px
-
-  .form-control
-    padding 24px 15px
-    font-size 20px
-    font-family roboto
-
-  .radio
-    margin-top 3px
-    font-size 14px
-    font-family roboto
-
-    input[type=radio]
-      margin-top 12px
-      padding-right 10px
-
-    .radio-question
-      margin 0
-      width 100%
-      padding 6px 10px 5px
-      -webkit-border-radius 5px
-      -moz-border-radius 5px
-      border-radius 5px
-      display inline-block
-      min-height 50px 
-
-      span
-        display inline-block
-        margin 10px 0 0 5px
-        line-height 1.2 
-
-        /* Medium devices (desktops, 992px and up) */
-        @media screen and (min-width 992px)
-          margin 3px 0 0 5px
-      
-      &:hover
-        opacity .6
-        -webkit-transition opacity .2s ease-in-out
-        transition opacity .2s ease-in-out
 
 /* 
  * BOOTSTRAP AUTO-WRAP COLUMN FIX
