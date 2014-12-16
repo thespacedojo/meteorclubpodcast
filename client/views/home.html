@@ -1,4 +1,6 @@
 <template name="home">
+
+	<!-- hero -->
 	<div class="podcast-hero">	
 		<div class="container">
 			<div class="row">
@@ -11,6 +13,7 @@
 		</div>
 	</div>
 
+	<!-- play bar -->
 	<div class="holder" style="height: 80px;">
 		<div class="podcast-play">
 			<div class="container">
@@ -23,6 +26,7 @@
 							<div class="col-lg-12">
 								<div class="latest-episode">
 									{{#with featured}}
+									<!-- show featured episode title -->
 									<span id="episode-title" class="pull-left">{{title}}</span>
 									
 									<!-- replace with actual episode time -->
@@ -45,10 +49,11 @@
 		</div>
 	</div>
 
+	<!-- clicked episode -->
 	<div class="featured-area">
-		<!-- clicked episode -->
 		{{> featuredArea featured}}
 	</div>
+
 
 	<div class="container episode-list">
 		<div class="row">
@@ -176,7 +181,7 @@
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 	      </div>
-	      
+
 	    </div><!-- /.modal-content -->
 	  </div><!-- /.modal-dialog -->
 	</div><!-- /.modal -->
