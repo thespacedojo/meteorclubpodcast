@@ -5,7 +5,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-12 center-block">
 					<img src="/images/podlogo7.png" class="pod-logo" alt="">
 					<h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
-					<span class="tagline hidden-xs">Brought to you by <a href="#">Josh Owens</a>, <a href="#">Ry Walker</a>, and <a href="#">Meteor Club</a>.</span>
+					<span class="tagline hidden-xs">Brought to you by <a href="http://joshowens.me">Josh Owens</a>, <a href="http://differential.io">Ry Walker</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
 				</div>
 			</div>
 		</div>
@@ -22,9 +22,11 @@
 						<div class="row episode-info">
 							<div class="col-lg-12">
 								<div class="latest-episode">
-									<span id="episode-title" class="pull-left"><strong>Episode 42:</strong> Node Forking Edition</span>
+									{{#with featured}}
+									<span id="episode-title" class="pull-left">{{title}}</span>
 									
 									<span id="time-remaining" class="hidden-xs pull-right">0:00 / 42:53</span>
+									{{/with}}
 								</div>
 							</div>
 						</div>
@@ -51,14 +53,12 @@
 					<div class="hidden-xs col-sm-3 col-md-4">
 						<span class="more">Latest Episodes</span>
 					</div>
-					<div class="col-xs-12 col-sm-9 col-md-8">
-						<div class="pull-right">
-							<ul class="podcast-social">
-								<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
-								<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
-								<li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp;Stitcher</a></li>
-							</ul>
-						</div>
+					<div class="col-xs-12 col-sm-9">
+						<ul class="podcast-social visible-xs visible-sm">
+							<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
+							<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
+							<li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp;Stitcher</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -73,8 +73,10 @@
 					<div class="row episode" id="{{_id}}">
 	
 						<div class="col-sm-12 col-md-12">
-							<span class="episode-plays"><!-- <i class="fa fa-microphone"></i>&nbsp;457 plays &nbsp;|&nbsp;  -->{{date}}</span>
-							<span class="episode-month">{{title}}</span>
+							<span class="episode-date">{{date}}</span>
+							<span class="episode-title">{{title}}</span>
+
+							<!-- truncated so the element height doesn't stretch -->
 							<span class="episode-description">{{createExcerpt description 145}}</span>
 						</div>
 						<div class="clearfix"></div>
@@ -85,25 +87,46 @@
 			<div class="col-md-5 hidden-sm hidden-xs">
 				<div class="row">
 					<div class="col-md-12 info-panel">
-						<h4 style="margin: 20px 0 0 0;">About the Podcast</h4>
-						<p style="margin-top: 10px;">Meteor Podcast takes an in-depth look at the Meteor.js framework. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio repellat iure ipsum delectus consectetur repudiandae excepturi, a ut sit fugit nam eos sed doloribus odit beatae nisi, quos incidunt.</p>
-
-						<div class="podcast-hosts">
-							<div class="row host">
-								<div class="col-sm-6 col-md-6 center-block">
-									<img src="/images/josh.png" alt="">
-									<h4>Josh Owens</h4>
-									<i class="fa fa-twitter"></i> <i class="fa fa-stack-overflow"></i> <i class="fa fa-github"></i>
-								</div>
-								<div class="col-sm-6 col-md-6 center-block">
-									<img src="/images/ry.png" alt="">
-									<h4>Ry Walker</h4>
-									<i class="fa fa-twitter"></i> <i class="fa fa-stack-overflow"></i> <i class="fa fa-github"></i>
-								</div>
+						<h4 style="margin: 20px 0 0 0;">Around the Web</h4>
+						<div class="row">
+							<div class="col-md-6">
+								<ul class="where-to-listen">
+									<a href="#"><li><i class="fa fa-fw fa-apple"></i> iTunes</li></a>
+									<a href="#"><li><i class="fa fa-fw fa-soundcloud"></i> Soundcloud</li></a>
+									<a href="#"><li><i class="fa fa-fw fa-sliders"></i> Stitcher</li></a>
+								</ul>
+							</div>
+							<div class="col-md-6">
+								<ul class="where-to-listen">
+									<a href="#"><li><i class="fa fa-fw fa-twitter"></i> Twitter</li></a>
+									<a href="#"><li><i class="fa fa-fw fa-rocket"></i> Meteor Club</li></a>
+								</ul>
 							</div>
 						</div>
 
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint sequi, fugit voluptas aliquid voluptatum commodi aliquam, dolore voluptatibus omnis ipsum unde inventore. Voluptates sint harum, praesentium nihil ad nulla aliquid.</p>
+						<div class="row">
+							<div class="col-md-12">
+								<h4 style="margin: 40px 0 0 0;">About the Podcast</h4>
+								<p style="margin-top: 10px;">Meteor Podcast covers all the news and updates happening around the Meteor Community. Join hosts Josh Owens and Ry Walker every week. Haven't heard of Meteor yet? <a href="http://meteor.com">Click here</a> to learn more about the unique javascript platform.</p>
+
+								<div class="podcast-hosts">
+									<div class="row host">
+										<div class="col-sm-6 col-md-6 center-block">
+											<img src="/images/josh.png" alt="">
+											<h4>Josh Owens</h4>
+											<a href="http://joshowens.me" class="website">joshowens.me</a>
+											<a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+										</div>
+										<div class="col-sm-6 col-md-6 center-block">
+											<img src="/images/ry.png" alt="">
+											<h4>Ry Walker</h4>
+											<a href="http://differential.com" class="website">differential.com</a>
+											<a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -177,7 +200,9 @@
 
 				<a href="#" class="transcript btn btn-primary"><i class="fa fa-play-circle"></i>&nbsp; Play Episode</a> <br>
 
-				<a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-download"></i>&nbsp; Download</a> <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-apple"></i>&nbsp; iTunes</a> <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
+				<div class="secondary-ctas">
+					<a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-download"></i>&nbsp; Download</a> / <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-apple"></i>&nbsp; iTunes</a> / <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
+				</div>
 			</div>
 		</div>
 

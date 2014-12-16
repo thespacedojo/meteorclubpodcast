@@ -292,6 +292,17 @@ footer
       
       &:hover
         text-decoration none
+    
+    &.two
+      font-style normal
+      margin-top 25px
+      display block
+      
+      a
+        border none
+        padding 8px 16px
+        border-radius 3px
+        margin 0 5px
   
   .pod-logo
     width 200px
@@ -425,6 +436,9 @@ footer
     @media screen and (min-width: 768px) 
       font-size 32px
       margin-top 15px
+    
+    &:hover
+      cursor pointer
   
   span.option
     font-size 14px
@@ -446,6 +460,14 @@ footer
 .featured-area
   background #e9e8ef
   height 645px
+  
+  /* Small devices (tablets, 768px and up) */
+  @media screen and (min-width: 768px) 
+    height 625px
+  
+  /* Medium devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) 
+    height 645px
   
 .spotlight-details
   padding-top 50px
@@ -476,20 +498,13 @@ footer
     @media screen and (min-width: 768px) 
       font-size 16px
     
-  .placeholder-image
-    background #eee
-    background-size cover
-    width 200px
-    height 200px
-    border-radius 50%
-    text-align center
-    span.num
-      font-size 80px
-      position relative
-      top 40px
-      display block
-      font-weight 700
-    
+  .secondary-ctas
+    color #888
+    a
+      color #333
+      &:hover
+        color #777
+      
   span.date
     font-style oblique
     font-family droid
@@ -598,32 +613,51 @@ ul.episode-options
 
 .info-panel
   height 800px
-  // background-color lighten(#eee, 2%)
-  // background #0f0e23
-  // background darken(#27263e, 5%)
   background url('/images/raw-bg9.jpg')
   background-size cover
   background-position 0% 100%
   border-radius 0px
   color white
   padding 15px 35px 15px
-  // border-bottom 1px solid #0f0e23
   border-right 1px solid #0f0e23
+  
+  a
+    color white
   
   h4
     margin 20px 0 0
     padding 0 
   
   p
-    color white
-    opacity .7 
+    color #b5b2ba
     margin 0
   
+  .where-to-listen
+    margin 20px 0 0
+    padding 0
+    
+    a
+      text-decoration none
+      &:hover
+        text-decoration none
+    
+    li
+      display block
+      background #a9acc9
+      padding 6px 12px
+      border-radius 3px
+      color #2e3e5e
+      font-size 18px
+      transition background .2s ease-in-out
+      
+      &:hover
+        background lighten(#a9acc9, 65%)
+        transition background .2s ease-in-out
+    
+
   .podcast-hosts
     padding 20px 0 40px
     margin 30px 0
-    // border-top 1px solid #ddd
-    // border-bottom 1px solid #ddd
     
     .host
       margin-top 20px
@@ -634,19 +668,23 @@ ul.episode-options
       
       i
         font-size 16px
-        margin 10px 5px 0 0
+        margin 5px 5px 0 0
         opacity .6
+      
+      .website
+        display block
+        font-size 12px
+        margin-top 5px
 
 .episode-list
   margin-top -217px
   
-  /* Large devices (large desktops, 1200px and up) */
-  @media screen and (min-width: 1200px)
-    margin-top -217px
+  /* Medium devices (desktops, 992px and up) */
+  @media screen and (min-width: 992px) 
+    margin-top -213px
 
 .episode-archive
   margin 0
-  // border-top 1px solid #ddd
   
   a:hover
     text-decoration none
@@ -678,21 +716,21 @@ ul.episode-options
       transition background .2s ease-in-out
       cursor pointer
     
-      span.episode-month
+      span.episode-title
         color lighten(#2e273d, 20%)
         transition color .2s
 
-    span.episode-month, span.episode-description
+    span.episode-title, span.episode-description
       margin-top 0
   
-    span.episode-plays
+    span.episode-date
       color #333
       opacity .5
       margin 0 0 3px 0
       display block
       font-size 15px
       
-    span.episode-month
+    span.episode-title
       font-size 22px
       margin 5px 0 3px 0
       display block
@@ -775,6 +813,7 @@ ul.episode-options
     @media screen and (min-width: 768px) 
       font-size 14px
       margin auto
+      float right
     
     li
       display inline
