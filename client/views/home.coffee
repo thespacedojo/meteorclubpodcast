@@ -17,15 +17,6 @@ Template.home.rendered = ->
       #$(".podcast-hero").height() + 80
       $('.holder').offset().top
   
-  setFeature = ->
-  	$(".featured-video").html "<iframe src=\"" + Media.findOne(_id: Session.get("spotlightID")).embedUrl
-  	return
-
-  $(document).scroll ->
-	  scrollPosition = undefined
-	  scrollPosition = document.body.scrollTop
-	  console.log scrollPosition
-	  return
 
 Template.home.events 
   # JOSH: why aren't touch events working? 
@@ -40,7 +31,6 @@ Template.home.events
       e.preventDefault()
       newID = e.currentTarget.id
       Session.set "spotlightID", newID
-
       $("html, body").animate
         scrollTop: $(".holder").offset().top
       , 700
@@ -48,3 +38,5 @@ Template.home.events
 
   "touchstart body": (e) ->
     Session.set "dragging", false
+
+

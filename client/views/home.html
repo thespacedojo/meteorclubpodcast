@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12 col-lg-12 center-block">
-					<img src="/images/podlogo7.png" class="pod-logo" alt="">
+					<img src="/images/podcast_logo.png" class="pod-logo" alt="">
 					<h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
 					<span class="tagline hidden-xs">Brought to you by <a href="http://joshowens.me">Josh Owens</a>, <a href="http://differential.io">Ry Walker</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
 				</div>
@@ -60,13 +60,13 @@
 			<div class="col-md-12 dark-bar two">
 				<div class="row">
 
-					<div class="hidden-xs col-sm-3 col-md-4">
+					<div class="col-xs-12 col-sm-3 col-md-4">
 						<span class="more">Latest Episodes</span>
 					</div>
 
 					<div class="col-xs-12 col-sm-9">
 						<!-- only shows up on tablets and smaller -->
-						<ul class="podcast-social visible-xs visible-sm">
+						<ul class="podcast-social visible-sm">
 							<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
 							<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
 							<li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp;Stitcher</a></li>
@@ -196,10 +196,27 @@
 				<h3>{{title}}</h3>
 				<p>{{description}}</p>
 
-				<a href="#" class="transcript btn btn-primary"><i class="fa fa-play-circle"></i>&nbsp; Play Episode</a> <br>
+				<a href="#" class="transcript btn btn-primary" id="play-episode"><i class="fa fa-play-circle"></i>&nbsp; Play Episode</a> <br>
 
-				<div class="secondary-ctas">
-					<a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-download"></i>&nbsp; Download</a> / <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-apple"></i>&nbsp; iTunes</a> / <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
+				<!-- mobile styles -->
+				<div class="visible-xs">
+					<ul class="mobile-options">
+						<!-- download on mobile?? -->
+						<a href="#"><li><i class="fa fa-download"></i>&nbsp; Download Episode</li></a>
+						<!-- open itunes app mobile -->
+						<a href="#"><li><i class="fa fa-apple"></i>&nbsp; iTunes</li></a>
+						<!-- open transcript modal, same as desktop -->
+						<a class="transcript" data-toggle="modal" data-target="#transcript-modal"><li><i class="fa fa-file-text-o"></i>&nbsp; Transcript</li></a>
+					</ul>
+				</div>
+
+				<!-- tablet and bigger styles -->
+				<div class="secondary-ctas hidden-xs">
+					<a class="transcript btn btn-subtle" href="#"><i class="fa fa-download"></i>&nbsp; Download</a> 
+					<div class="hidden-xs" style="display: inline;">/</div> 
+					<a class="transcript btn btn-subtle" href="#"><i class="fa fa-apple"></i>&nbsp; iTunes</a>
+					<div class="hidden-xs" style="display: inline;">/</div>
+					<a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
 				</div>
 			</div>
 		</div>

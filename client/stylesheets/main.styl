@@ -305,8 +305,16 @@ footer
         margin 0 5px
   
   .pod-logo
-    width 200px
+    width 130px
     height auto
+    
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (min-width: 768px) 
+      width 150px
+    
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
+      width 180px
 
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width 768px)
@@ -321,7 +329,7 @@ footer
   /* Large devices (large desktops, 1200px and up) */
   @media screen and (min-width 1200px)
     height 500px 
-    padding 140px 0 0
+    padding 120px 0 0
 
   h1
     font-size 28px
@@ -457,19 +465,24 @@ footer
 
 .featured-area
   background #e9e8ef
-  height 670px
+  height auto
+  padding-bottom 220px
   
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width: 768px) 
-    height 625px
+    height auto
+    padding-bottom 210px
   
   /* Medium devices (desktops, 992px and up) */
   @media screen and (min-width: 992px) 
-    height 645px
+    // height 645px
+    height auto
+    padding-bottom 210px
   
 .spotlight-details
   padding-top 50px
   padding-bottom 40px
+  display block
   
   /* Small devices (tablets, 768px and up) */
   @media screen and (min-width: 768px) 
@@ -478,7 +491,7 @@ footer
   
   /* Medium devices (desktops, 992px and up) */
   @media screen and (min-width: 992px) 
-    padding-top 80px
+    padding-top 70px
     padding-bottom 60px
     
   h3
@@ -510,16 +523,39 @@ footer
     font-size 16px
   
   .btn-subtle
-    background-color #e9e8ef
+    background none
     color darken(#b0b0b6, 20%)
     margin 0 !important
     
     &:hover
       color darken(#b0b0b6, 65%)
+      background none
 
   .transcript
     margin 20px 0
-           
+  
+  #play-episode
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (max-width: 768px) 
+      width 100%       
+      font-size 20px
+      padding 15px
+  
+  ul.mobile-options
+    text-align left
+    list-style-type none
+    margin 0
+    font-size 14px
+    
+    a
+      color blue
+    
+    li
+      border-bottom 1px solid #ccc !important
+      padding-bottom 10px
+      
+      &:last-child
+        border none
 
 .info-panel
   height 800px
