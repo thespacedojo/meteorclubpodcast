@@ -1,4 +1,5 @@
-Episodes.remove({});
+// JOSH: Static database entries for design purposes
+// Episodes.remove({});
 if (Episodes.find().count() === 0) {
 
   Episodes.insert({
