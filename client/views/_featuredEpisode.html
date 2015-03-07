@@ -1,0 +1,35 @@
+<template name="featuredEpisode">
+  <div class="container spotlight-details">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center;">
+        <span class="date">{{date}}</span>
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+
+        <a href="#" class="transcript btn btn-primary" id="play-episode"><i class="fa fa-play-circle"></i>&nbsp; Play Episode</a> <br>
+
+        <!-- mobile styles -->
+        <div class="visible-xs">
+          <ul class="mobile-options">
+            <!-- download on mobile?? -->
+            <a href="#"><li><i class="fa fa-download"></i>&nbsp; Download Episode</li></a>
+            <!-- open itunes app mobile -->
+            <a href="#"><li><i class="fa fa-apple"></i>&nbsp; iTunes</li></a>
+            <!-- open transcript modal, same as desktop -->
+            <a class="transcript" data-toggle="modal" data-target="#transcript-modal"><li><i class="fa fa-file-text-o"></i>&nbsp; Transcript</li></a>
+          </ul>
+        </div>
+
+        <!-- tablet and bigger styles -->
+        <div class="secondary-ctas hidden-xs">
+          <a class="transcript btn btn-subtle" href="#"><i class="fa fa-download"></i>&nbsp; Download</a>
+          <div class="hidden-xs" style="display: inline;">/</div>
+          <a class="transcript btn btn-subtle" href="#"><i class="fa fa-apple"></i>&nbsp; iTunes</a>
+          <div class="hidden-xs" style="display: inline;">/</div>
+          <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</template>

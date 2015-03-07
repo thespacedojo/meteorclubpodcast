@@ -9,7 +9,6 @@ stylus
 mizzao:bootstrap-3
 natestrauser:font-awesome
 iron:router
-iron:layout
 sacha:spin
 mrt:mailchimp
 coffeescript
@@ -18,4 +17,6 @@ dburles:collection-helpers
 useraccounts:bootstrap
 email
 spiderable
+accounts-password
 
+pfafman:coffee-alerts

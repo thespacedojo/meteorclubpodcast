@@ -1,225 +1,180 @@
 <template name="home">
 
-	<!-- hero -->
-	<div class="podcast-hero">	
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-12 center-block">
-					<img src="/images/podcast_logo.png" class="pod-logo" alt="">
-					<h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
-					<span class="tagline hidden-xs">Brought to you by <a href="http://joshowens.me">Josh Owens</a>, <a href="http://differential.io">Ry Walker</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
-				</div>
-			</div>
-		</div>
-	</div>
+  <!-- hero -->
+  <div class="podcast-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 center-block">
+          <img src="/images/podcast_logo.png" class="pod-logo" alt="">
+          <h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
+          <span class="tagline hidden-xs">Brought to you by <a href="http://joshowens.me">Josh Owens</a>, <a href="http://differential.io">Ry Walker</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<!-- play bar -->
-	<div class="holder" style="height: 80px;">
-		<div class="podcast-play">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-1 col-sm-1 col-md-1">
-						<span class="play pull-left"><i class="fa fa-play"></i></span>
-					</div>
-					<div class="col-xs-10 col-sm-11 col-md-11">
-						<div class="row episode-info">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-								<div class="latest-episode">
-									{{#with featured}}
-									<!-- show featured episode title -->
-									<span id="episode-title" class="pull-left">{{title}}</span>
-									
-									<!-- replace with actual episode time -->
-									<span id="time-remaining" class="hidden-xs pull-right">0:00 / 42:53</span>
-									{{/with}}
-								</div>
-							</div>
-						</div>
+  <!-- play bar -->
+  <div class="holder" style="height: 80px;">
+    <div class="podcast-play">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-1 col-sm-1 col-md-1">
+            <span class="play pull-left"><i class="fa fa-play"></i></span>
+          </div>
+          <div class="col-xs-10 col-sm-11 col-md-11">
+            <div class="row episode-info">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="latest-episode">
+                  {{#with featured}}
+                  <!-- show featured episode title -->
+                  <span id="episode-title" class="pull-left">{{title}}</span>
 
-						<div class="row">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <!-- replace with actual episode time -->
+                  <span id="time-remaining" class="hidden-xs pull-right">0:00 / 42:53</span>
+                  {{/with}}
+                </div>
+              </div>
+            </div>
 
-								<!-- i don't have anything styled for this bar filling up. just the basic bar is in place. -->
-								<div class="progress-bar"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-	<!-- clicked episode -->
-	<div class="featured-area">
-		{{> featuredArea featured}}
-	</div>
+                <!-- i don't have anything styled for this bar filling up. just the basic bar is in place. -->
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- clicked episode -->
+  <div class="featured-area">
+    {{> featuredEpisode featured}}
+  </div>
 
 
-	<div class="container episode-list">
-		<div class="row">
-			<div class="col-md-12 dark-bar two">
-				<div class="row">
+  <div class="container episode-list">
+    <div class="row">
+      <div class="col-md-12 dark-bar two">
+        <div class="row">
 
-					<div class="col-xs-12 col-sm-3 col-md-4">
-						<span class="more">Latest Episodes</span>
-					</div>
+          <div class="col-xs-12 col-sm-3 col-md-4">
+            <span class="more">Latest Episodes</span>
+          </div>
 
-					<div class="col-xs-12 col-sm-9">
-						<!-- only shows up on tablets and smaller -->
-						<ul class="podcast-social visible-sm">
-							<li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
-							<li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
-							<li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp;Stitcher</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <div class="col-xs-12 col-sm-9">
+            <!-- only shows up on tablets and smaller -->
+            <ul class="podcast-social visible-sm">
+              <li><a href="#"><i class="fa fa-apple fa-fw"></i>&nbsp;iTunes</a>  &nbsp;/&nbsp;</li>
+              <li><a href="#"><i class="fa fa-soundcloud fa-fw"></i>&nbsp; Soundcloud</a>  &nbsp;/&nbsp;</li>
+              <li><a href="#"><i class="fa fa-play-circle fa-fw"></i>&nbsp;Stitcher</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<div class="container">
-		<div class="row">
+  <div class="container">
+    <div class="row">
 
-			<!-- episode loop -->
-			<div class="col-md-7 episode-archive">
-				{{#each episodes}}
-					<div class="row episode" id="{{_id}}">
-	
-						<div class="col-sm-12 col-md-12">
-							<span class="episode-date">{{date}}</span>
-							<span class="episode-title">{{title}}</span>
+      <!-- episode loop -->
+      <div class="col-md-7 episode-archive">
+        {{#each episodes}}
+          {{> episode}}
+        {{/each}}
+      </div>
 
-							<!-- truncated so the element height doesn't stretch -->
-							<span class="episode-description">{{createExcerpt description 145}}</span>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				{{/each}}
-			</div>
+      <div class="col-md-5 hidden-sm hidden-xs">
+        <div class="row">
+          <div class="col-md-12 info-panel">
 
-			<div class="col-md-5 hidden-sm hidden-xs">
-				<div class="row">
-					<div class="col-md-12 info-panel">
+            <!-- links out -->
+            <h4 style="margin: 20px 0 0 0;">Around the Web</h4>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="where-to-listen">
+                  <a href="#"><li><i class="fa fa-fw fa-apple"></i> iTunes</li></a>
+                  <a href="#"><li><i class="fa fa-fw fa-soundcloud"></i> Soundcloud</li></a>
+                  <a href="#"><li><i class="fa fa-fw fa-sliders"></i> Stitcher</li></a>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="where-to-listen">
+                  <a href="#"><li><i class="fa fa-fw fa-twitter"></i> Twitter</li></a>
+                  <a href="#"><li><i class="fa fa-fw fa-rocket"></i> Meteor Club</li></a>
+                </ul>
+              </div>
+            </div>
 
-						<!-- links out -->
-						<h4 style="margin: 20px 0 0 0;">Around the Web</h4>
-						<div class="row">
-							<div class="col-md-6">
-								<ul class="where-to-listen">
-									<a href="#"><li><i class="fa fa-fw fa-apple"></i> iTunes</li></a>
-									<a href="#"><li><i class="fa fa-fw fa-soundcloud"></i> Soundcloud</li></a>
-									<a href="#"><li><i class="fa fa-fw fa-sliders"></i> Stitcher</li></a>
-								</ul>
-							</div>
-							<div class="col-md-6">
-								<ul class="where-to-listen">
-									<a href="#"><li><i class="fa fa-fw fa-twitter"></i> Twitter</li></a>
-									<a href="#"><li><i class="fa fa-fw fa-rocket"></i> Meteor Club</li></a>
-								</ul>
-							</div>
-						</div>
+            <!-- about the podcast -->
+            <div class="row">
+              <div class="col-md-12">
+                <h4 style="margin: 40px 0 0 0;">About the Podcast</h4>
+                <p style="margin-top: 10px;">Meteor Podcast covers all the news and updates happening around the Meteor Community. Join hosts Josh Owens and Ry Walker every week. Haven't heard of Meteor yet? <a href="http://meteor.com">Click here</a> to learn more about the unique javascript platform.</p>
 
-						<!-- about the podcast -->
-						<div class="row">
-							<div class="col-md-12">
-								<h4 style="margin: 40px 0 0 0;">About the Podcast</h4>
-								<p style="margin-top: 10px;">Meteor Podcast covers all the news and updates happening around the Meteor Community. Join hosts Josh Owens and Ry Walker every week. Haven't heard of Meteor yet? <a href="http://meteor.com">Click here</a> to learn more about the unique javascript platform.</p>
+                <div class="podcast-hosts">
+                  <div class="row host">
+                    <div class="col-sm-6 col-md-6 center-block">
+                      <img src="/images/josh.png" alt="">
+                      <h4>Josh Owens</h4>
+                      <a href="http://joshowens.me" class="website">joshowens.me</a>
+                      <a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+                    </div>
+                    <div class="col-sm-6 col-md-6 center-block">
+                      <img src="/images/ry.png" alt="">
+                      <h4>Ry Walker</h4>
+                      <a href="http://differential.com" class="website">differential.com</a>
+                      <a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-								<div class="podcast-hosts">
-									<div class="row host">
-										<div class="col-sm-6 col-md-6 center-block">
-											<img src="/images/josh.png" alt="">
-											<h4>Josh Owens</h4>
-											<a href="http://joshowens.me" class="website">joshowens.me</a>
-											<a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
-										</div>
-										<div class="col-sm-6 col-md-6 center-block">
-											<img src="/images/ry.png" alt="">
-											<h4>Ry Walker</h4>
-											<a href="http://differential.com" class="website">differential.com</a>
-											<a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+          </div>
+        </div>
+      </div>
 
-					</div>
-				</div>
-			</div>
+    </div>
 
-		</div>
+    <!-- older and newer episode pages -->
+    <div class="row">
+      <div class="col-md-12 dark-bar">
+        <a class="older pull-left" href="#"><i class="fa fa-angle-left fa-fw"></i>&nbsp;Older</a>
 
-		<!-- older and newer episode pages -->
-		<div class="row">
-			<div class="col-md-12 dark-bar">
-				<a class="older pull-left" href="#"><i class="fa fa-angle-left fa-fw"></i>&nbsp;Older</a> 
+        <!-- need to hide this on first page of episodes -->
+        <a class="newer pull-right" href="#">Newer <i class="fa fa-angle-right fa-fw"></i></a>
+      </div>
+    </div>
 
-				<!-- need to hide this on first page of episodes -->
-				<a class="newer pull-right" href="#">Newer <i class="fa fa-angle-right fa-fw"></i></a>
-			</div>
-		</div>
+  </div>
 
-	</div>
+  <div class="modal fade" id="transcript-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
 
-	<div class="modal fade" id="transcript-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	  <div class="modal-dialog modal-lg">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	      </div>
+        <div class="modal-body">
 
-	      <div class="modal-body">
+          <!-- YOUR TRANSCRIPT GOES HERE -->
+          <h2>Episode 42: Node Forking Edition</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis aspernatur temporibus numquam sunt, inventore modi quis eos fugiat aliquam, necessitatibus a illo voluptate veniam. Inventore nisi alias corrupti, cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ad cupiditate, nihil aut error aliquid autem repudiandae. Sunt laboriosam culpa, vel voluptate dolore repellat distinctio ad. Ducimus nesciunt, rem necessitatibus.</p>
 
-	      	<!-- YOUR TRANSCRIPT GOES HERE -->
-	      	<h2>Episode 42: Node Forking Edition</h2>
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis aspernatur temporibus numquam sunt, inventore modi quis eos fugiat aliquam, necessitatibus a illo voluptate veniam. Inventore nisi alias corrupti, cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae ad cupiditate, nihil aut error aliquid autem repudiandae. Sunt laboriosam culpa, vel voluptate dolore repellat distinctio ad. Ducimus nesciunt, rem necessitatibus.</p>
 
-	        
-	      </div>
+        </div>
 
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
 
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 
 </template>
 
-<template name="featuredArea">
-	<div class="container spotlight-details">
-		<div class="row">
-			<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center;">
-				<span class="date">{{date}}</span>
-				<h3>{{title}}</h3>
-				<p>{{description}}</p>
-
-				<a href="#" class="transcript btn btn-primary" id="play-episode"><i class="fa fa-play-circle"></i>&nbsp; Play Episode</a> <br>
-
-				<!-- mobile styles -->
-				<div class="visible-xs">
-					<ul class="mobile-options">
-						<!-- download on mobile?? -->
-						<a href="#"><li><i class="fa fa-download"></i>&nbsp; Download Episode</li></a>
-						<!-- open itunes app mobile -->
-						<a href="#"><li><i class="fa fa-apple"></i>&nbsp; iTunes</li></a>
-						<!-- open transcript modal, same as desktop -->
-						<a class="transcript" data-toggle="modal" data-target="#transcript-modal"><li><i class="fa fa-file-text-o"></i>&nbsp; Transcript</li></a>
-					</ul>
-				</div>
-
-				<!-- tablet and bigger styles -->
-				<div class="secondary-ctas hidden-xs">
-					<a class="transcript btn btn-subtle" href="#"><i class="fa fa-download"></i>&nbsp; Download</a> 
-					<div class="hidden-xs" style="display: inline;">/</div> 
-					<a class="transcript btn btn-subtle" href="#"><i class="fa fa-apple"></i>&nbsp; iTunes</a>
-					<div class="hidden-xs" style="display: inline;">/</div>
-					<a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
-				</div>
-			</div>
-		</div>
-
-	</div>
-</template>

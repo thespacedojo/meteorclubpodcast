@@ -1,0 +1,19 @@
+<template name="newEpisode">
+<form>
+  <div class="form-group">
+    {{text_field "title" required=true}}
+  </div>
+  
+  <div class="form-group">
+    {{text_field "date" type="date" required=true}}
+  </div>
+
+  <div class="form-group">
+    {{text_area "description" required=true}}
+  </div>
+
+  <div class="form-group">
+    {{submit_button "Add episode"}}
+  </div>
+</form>
+</template>
