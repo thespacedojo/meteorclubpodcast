@@ -3,9 +3,9 @@ Template.home.helpers
     Episodes.findOne(Session.get('spotlightID'))
 
 
-Template.home.rendered = ->
+Template.home.onRendered ->
   # set the seeded
-  Session.set "spotlightID", Episodes.findOne(spotlight: 1)._id
+  Session.set "spotlightID", Episodes.findOne({}, {sort: {date: -1}})._id
 
   # set dragging variable
   Session.set "dragging", false

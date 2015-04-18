@@ -18,31 +18,13 @@
     <div class="podcast-play">
       <div class="container">
         <div class="row">
-          <div class="col-xs-1 col-sm-1 col-md-1">
-            <span class="play pull-left"><i class="fa fa-play"></i></span>
-          </div>
-          <div class="col-xs-10 col-sm-11 col-md-11">
+          <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="row episode-info">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="latest-episode">
-                  {{#with featured}}
-                  <!-- show featured episode title -->
-                  <span id="episode-title" class="pull-left">{{title}}</span>
-
-                  <!-- replace with actual episode time -->
-                  <span id="time-remaining" class="hidden-xs pull-right">0:00 / 42:53</span>
-                  {{/with}}
-                </div>
-              </div>
+                {{#with featured}}
+                  {{{player}}}
+                {{/with}}
             </div>
 
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                <!-- i don't have anything styled for this bar filling up. just the basic bar is in place. -->
-                <div class="progress-bar"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

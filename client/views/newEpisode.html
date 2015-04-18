@@ -1,19 +1,33 @@
 <template name="newEpisode">
-<form>
-  <div class="form-group">
-    {{text_field "title" required=true}}
-  </div>
-  
-  <div class="form-group">
-    {{text_field "date" type="date" required=true}}
-  </div>
+<div class="container">
+  <form>
+    <div class="form-group">
+      {{text_field "title" required=true}}
+    </div>
 
-  <div class="form-group">
-    {{text_area "description" required=true}}
-  </div>
+    <div class="form-group">
+      {{text_field "date" type="date" required=true}}
+    </div>
 
-  <div class="form-group">
-    {{submit_button "Add episode"}}
-  </div>
-</form>
+    <div class="form-group">
+      {{text_area "description" required=true}}
+    </div>
+
+    <div class="form-group">
+      {{text_field "player" required=true}}
+    </div>
+
+    <div class="form-group">
+      {{text_field "download" required=true}}
+    </div>
+
+    <div class="form-group">
+      {{text_area "showNotes" required=true}}
+    </div>
+
+    <div class="form-group">
+      {{submit_button "Add episode"}}
+    </div>
+  </form>
+</div>
 </template>
