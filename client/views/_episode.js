@@ -5,10 +5,9 @@ Template.episode.events({
       return;
     } else {
       e.preventDefault();
-      debugger
       Session.set("spotlightID", t.data._id);
       $("html, body").animate({scrollTop: $(".holder").offset().top}, 700);
-      return
+      return;
     }
   }
 });
