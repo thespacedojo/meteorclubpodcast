@@ -3,12 +3,12 @@ Episodes = new Mongo.Collection('episodes');
 
 Episodes.allow({
   insert: function(userId, doc) {
-    return userId;
+    return Roles.userIsInRole(userId, 'admin');
   },
   update: function(userId, doc, fields, modifier) {
-    return userId;
+    return Roles.userIsInRole(userId, 'admin');
   },
   remove: function(userId, doc) {
-    return userId;
+    return Roles.userIsInRole(userId, 'admin');
   }
 })
