@@ -2,7 +2,7 @@
   <div class="container spotlight-details">
     <div class="row">
       <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2" style="text-align: center;">
-        <span class="date">{{date}}</span>
+        <span class="date">{{prettyDate}}</span>
         <h3>{{title}}</h3>
         <p>{{description}}</p>
 
@@ -12,24 +12,47 @@
         <div class="visible-xs">
           <ul class="mobile-options">
             <!-- download on mobile?? -->
-            <a href="#"><li><i class="fa fa-download"></i>&nbsp; Download Episode</li></a>
             <!-- open itunes app mobile -->
-            <a href="#"><li><i class="fa fa-apple"></i>&nbsp; iTunes</li></a>
+            <a href="{{download}}"><li><i class="fa fa-download"></i>&nbsp; Download Episode</li></a>
+            <a href="{{iTunesLink}}"><li><i class="fa fa-apple"></i>&nbsp; iTunes</li></a>
             <!-- open transcript modal, same as desktop -->
-            <a class="transcript" data-toggle="modal" data-target="#transcript-modal"><li><i class="fa fa-file-text-o"></i>&nbsp; Transcript</li></a>
+            <a class="transcript" data-toggle="modal" data-target="#transcript-modal"><li><i class="fa fa-file-text-o"></i>&nbsp; Show Notes</li></a>
           </ul>
         </div>
 
         <!-- tablet and bigger styles -->
         <div class="secondary-ctas hidden-xs">
-          <a class="transcript btn btn-subtle" href="#"><i class="fa fa-download"></i>&nbsp; Download</a>
+          <a class="transcript btn btn-subtle" href="{{download}}"><i class="fa fa-download"></i>&nbsp; Download</a>
           <div class="hidden-xs" style="display: inline;">/</div>
-          <a class="transcript btn btn-subtle" href="#"><i class="fa fa-apple"></i>&nbsp; iTunes</a>
+          <a class="transcript btn btn-subtle" href="{{iTunesLink}}"><i class="fa fa-apple"></i>&nbsp; iTunes</a>
           <div class="hidden-xs" style="display: inline;">/</div>
-          <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Transcript</a>
+          <a class="transcript btn btn-subtle" data-toggle="modal" data-target="#transcript-modal"><i class="fa fa-file-text-o"></i>&nbsp; Show Notes</a>
         </div>
       </div>
     </div>
 
   </div>
+  <div class="modal fade" id="transcript-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        </div>
+
+        <div class="modal-body">
+
+          <!-- YOUR TRANSCRIPT GOES HERE -->
+          <h2>{{title}}</h2>
+          <p>{{#markdown}}{{showNotes}}{{/markdown}}</p>
+
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 </template>

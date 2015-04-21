@@ -10,7 +10,6 @@ mizzao:bootstrap-3
 natestrauser:font-awesome
 iron:router
 sacha:spin
-mrt:mailchimp
 coffeescript
 joshowens:simple-form
 dburles:collection-helpers
@@ -22,3 +21,5 @@ accounts-password
 pfafman:coffee-alerts
 msavin:mongol
 alanning:roles
+momentjs:moment
+markdown
