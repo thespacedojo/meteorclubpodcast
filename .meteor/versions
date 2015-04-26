@@ -57,6 +57,7 @@ natestrauser:font-awesome@4.3.0
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
+percolate:synced-cron@1.2.0
 pfafman:coffee-alerts@0.5.1_1
 pfafman:font-awesome-4@4.2.0_4
 random@1.0.3

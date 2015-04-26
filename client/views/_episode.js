@@ -11,4 +11,3 @@ Template.episode.events({
     }
   }
 });
-
