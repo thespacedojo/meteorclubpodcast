@@ -13,5 +13,6 @@ Template.registerHelper('prettyDate', function() {
 });
 
 Template.registerHelper('iTunesLink', function() {
+//TODO: don't hard code this link?
   return "https://itunes.apple.com/us/podcast/scaling-deploy-meteor-meteor/id984131621?i=339627585&mt=2"
 });

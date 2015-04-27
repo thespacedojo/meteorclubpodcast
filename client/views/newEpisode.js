@@ -3,20 +3,17 @@ Template.newEpisode.events({
     e.preventDefault();
     data = SimpleForm.processForm(e.target);
 
-    if (Episodes.findOne({episodeId: data.episodeId})) {
-      CoffeeAlerts.error("That episode already exists!");
-      return false;
-    }
-
-    ep = Episodes.insert(data, function(error, id) {
-      if (!error) {
-        CoffeeAlerts.success("The episode was added.");
-        Router.go("/");
-      } else {
-        CoffeeAlerts.warning("We had trouble saving the episode.");
-        console.log(error);
-      }
-    });
-  },
+    ep = Episodes.upsert({episodeId: data.episodeId},
+        {$set: data},
+        function(error, id) {
+          if (!error) {
+            CoffeeAlerts.success("Changes to " + data.title + " have been saved.");
+            Router.go("/");
+          } else {
+            CoffeeAlerts.warning("We had trouble saving the episode.");
+            console.log(error);
+          }
+        });
+  }
 });
 
