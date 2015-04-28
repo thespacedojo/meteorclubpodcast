@@ -17,18 +17,17 @@ Meteor.methods({
   },
 
   fetchAndInsertEpisodes: function() {
-    var podcastId = Meteor.call('getPodcast')[0].id;
+    var podcastId = Meteor.settings.podcastId || Meteor.call('getPodcast')[0].id;
     var episodes = Meteor.call('getEpisodes', podcastId);
 
     _.each(episodes, function(episode) {
-      episode.embedCode = Meteor.call('getEmbed', podcastId, episode.id);
 
       Episodes.upsert({episodeId: episode.id}, {$set: {
         episodeId: episode.id,
         title: episode.title,
         date: episode.published_at,
         description: episode.description,
-        player: episode.embedCode,
+        player: Meteor.call('getEmbed', podcastId, episode.id),
         download: episode.audio_url,
         showNotes: episode.long_description,
       }});
