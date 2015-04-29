@@ -18,14 +18,14 @@
     <div class="podcast-play">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="row episode-info">
                 {{#with featured}}
-                  {{{player}}}
+                  <audio style="width: 100%;" src="{{download}}" controls="controls">
+                    Your browser does not support the audio element.
+                  </audio>
                 {{/with}}
             </div>
 
-          </div>
         </div>
       </div>
     </div>
@@ -78,15 +78,16 @@
             <div class="row">
               <div class="col-md-6">
                 <ul class="where-to-listen">
-                  <a href="#"><li><i class="fa fa-fw fa-apple"></i> iTunes</li></a>
-                  <a href="#"><li><i class="fa fa-fw fa-soundcloud"></i> Soundcloud</li></a>
-                  <a href="#"><li><i class="fa fa-fw fa-sliders"></i> Stitcher</li></a>
+                  <a href="https://itunes.apple.com/us/podcast/id984131621&mt=2"><li><i class="fa fa-fw fa-apple"></i> iTunes</li></a>
+                  <a href="http://simplecast.fm/podcasts/1108/rss"><li><i class="fa fa-fw fa-rss"></i> RSS Feed</li></a>
+                  <!-- <a href="#"><li><i class="fa fa-fw fa-soundcloud"></i> Soundcloud</li></a> -->
+                  <!-- <a href="#"><li><i class="fa fa-fw fa-sliders"></i> Stitcher</li></a> -->
                 </ul>
               </div>
               <div class="col-md-6">
                 <ul class="where-to-listen">
-                  <a href="#"><li><i class="fa fa-fw fa-twitter"></i> Twitter</li></a>
-                  <a href="#"><li><i class="fa fa-fw fa-rocket"></i> Meteor Club</li></a>
+                  <a href="https://twitter.com/meteorjsclub"><li><i class="fa fa-fw fa-twitter"></i> Twitter</li></a>
+                  <a href="https://meteorjs.club/"><li><i class="fa fa-fw fa-rocket"></i> Meteor Club</li></a>
                 </ul>
               </div>
             </div>
