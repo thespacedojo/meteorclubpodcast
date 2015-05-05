@@ -7,7 +7,8 @@
         <div class="col-sm-12 col-md-12 col-lg-12 center-block">
           <img src="/images/podcast_logo.png" class="pod-logo" alt="">
           <h1 style="font-weight: 300;">A weekly podcast about Meteor.js.</h1>
-          <span class="tagline hidden-xs">Brought to you by <a href="http://joshowens.me">Josh Owens</a>, <a href="http://differential.io">Ry Walker</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
+          <span class="tagline hidden-xs">Brought to you by <a
+              href="http://joshowens.me">Josh Owens</a>, <a href="https://medium.com/@benstr">Ben Strahan</a>, and <a href="http://meteorjs.club">Meteor Club</a>.</span>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
         <div class="row">
             <div class="row episode-info">
                 {{#with featured}}
-                  <audio style="width: 100%;" src="{{download}}" controls="controls">
+                  <audio id="audio-player" style="width: 100%;" src="{{download}}" controls="controls">
                     Your browser does not support the audio element.
                   </audio>
                 {{/with}}
@@ -96,21 +97,21 @@
             <div class="row">
               <div class="col-md-12">
                 <h4 style="margin: 40px 0 0 0;">About the Podcast</h4>
-                <p style="margin-top: 10px;">Meteor Podcast covers all the news and updates happening around the Meteor Community. Join hosts Josh Owens and Ry Walker every week. Haven't heard of Meteor yet? <a href="http://meteor.com">Click here</a> to learn more about the unique javascript platform.</p>
+                <p style="margin-top: 10px;">Meteor Club Podcast is a weekly round-table discussion about all things Meteor. Join hosts Josh Owens and Ben Strahan as they speak with guests from around the community. <a href="http://meteorjs.club">Click here</a> to learn more about and to join Meteor Club.</p>
 
                 <div class="podcast-hosts">
                   <div class="row host">
                     <div class="col-sm-6 col-md-6 center-block">
-                      <img src="/images/josh.png" alt="">
+                      <img src="/images/josh.png" alt="Josh Owens">
                       <h4>Josh Owens</h4>
                       <a href="http://joshowens.me" class="website">joshowens.me</a>
-                      <a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+                      <a href="http://twitter.com/joshowens"><i class="fa fa-fw fa-twitter"></i></a> <a href="http://stackoverflow.com/users/3027494/josh-owens"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="https://github.com/queso"><i class="fa fa-fw fa-github"></i></a>
                     </div>
                     <div class="col-sm-6 col-md-6 center-block">
-                      <img src="/images/ry.png" alt="">
-                      <h4>Ry Walker</h4>
-                      <a href="http://differential.com" class="website">differential.com</a>
-                      <a href="#"><i class="fa fa-fw fa-twitter"></i></a> <a href="#"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="#"><i class="fa fa-fw fa-github"></i></a>
+                      <img src="/images/benstr.jpeg" alt="Ben Strahan">
+                      <h4>Ben Strahan</h4>
+                      <a href="https://medium.com/@benstr" class="website">medium.com/@benstr</a>
+                      <a href="http://twitter.com/benstr"><i class="fa fa-fw fa-twitter"></i></a> <a href="http://stackoverflow.com/users/2883366/benstr"><i class="fa fa-fw fa-stack-overflow"></i></a> <a href="https://github.com/benstr"><i class="fa fa-fw fa-github"></i></a>
                     </div>
                   </div>
                 </div>

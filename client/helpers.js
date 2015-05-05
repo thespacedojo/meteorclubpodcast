@@ -1,11 +1,11 @@
 Template.registerHelper('createExcerpt', function(e, tlength) {
-	var str = e;
-	var length = tlength;
-	if(str.length > length) {
-		return str.substr( 0, length ) + "...";
-	} else {
-		return str;
-	}
+  var str = e;
+  var length = tlength;
+  if(str.length > length) {
+    return str.substr( 0, length ) + "...";
+  } else {
+    return str;
+  }
 });
 
 Template.registerHelper('prettyDate', function() {
@@ -13,6 +13,6 @@ Template.registerHelper('prettyDate', function() {
 });
 
 Template.registerHelper('iTunesLink', function() {
-//TODO: don't hard code this link?
-  return "https://itunes.apple.com/us/podcast/scaling-deploy-meteor-meteor/id984131621?i=339627585&mt=2"
+  //TODO: don't hard code this link?
+  return "https://itunes.apple.com/us/podcast/meteor-club-podcast/id984131621?mt=2"
 });
