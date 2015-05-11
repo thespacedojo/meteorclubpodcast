@@ -400,11 +400,21 @@ footer
     margin 0
 
   .episode-info
-    border 1px solid gray
     padding 0px 1px
     margin-bottom 8px
     margin-top 22px
     border-radius 3px
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    audio
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      display: block;
+
     span
       font-size 10px
 
@@ -561,10 +571,6 @@ footer
         border none
 
 .info-panel
-  height 800px
-  background url('/images/raw-bg9.jpg')
-  background-size cover
-  background-position 0% 100%
   border-radius 0px
   color white
   padding 15px 35px 15px
@@ -636,6 +642,16 @@ footer
 .episode-archive-list
   background #f2f2f2
   border-left 1px solid #0f0e23
+  position relative
+
+.episode-archive-list .absolute-background
+  display:block;
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  background: url("/images/raw-bg9.jpg");
+  background-size: cover;
 
 .episode-archive
   margin 0
