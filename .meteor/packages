@@ -11,16 +11,13 @@ natestrauser:font-awesome
 iron:router
 sacha:spin
 coffeescript
-joshowens:simple-form
 dburles:collection-helpers
-useraccounts:bootstrap
 email
 spiderable
-accounts-password
+http
 
 pfafman:coffee-alerts
 msavin:mongol
-alanning:roles
 momentjs:moment
 markdown
 percolate:synced-cron
