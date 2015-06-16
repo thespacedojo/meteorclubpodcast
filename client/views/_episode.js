@@ -5,6 +5,13 @@ Template.episode.events({
       return;
     } else {
       e.preventDefault();
+      // stop the player
+      var audio = $('#audio-player')[0];
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+
       Session.set("spotlightID", t.data._id);
       $("html, body").animate({scrollTop: $(".holder").offset().top}, 700);
       return;

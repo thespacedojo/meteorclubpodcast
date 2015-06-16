@@ -21,7 +21,12 @@
         <div class="row">
             <div class="row episode-info">
                 {{#with featured}}
-                  {{> podcastPlayer}}
+                  <div class="podcast-player">
+                    <button class="pcast-speed">1x</button>
+                    <audio id="audio-player" style="width: 90%; float: left;" src="{{download}}" controls>
+                      Your browser does not support the audio element.
+                    </audio>
+                  </div>
                 {{/with}}
             </div>
 
