@@ -30,6 +30,7 @@ Meteor.methods({
         player: Meteor.call('getEmbed', podcastId, episode.id),
         download: episode.audio_url,
         showNotes: episode.long_description,
+        slug: getSlug(episode.title),
       }});
     });
   }

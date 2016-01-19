@@ -1,3 +1,10 @@
+Template.episode.onCreated(function() {
+    var instance = this;
+    var selectedEpisode = Router.current().params.slug;
+
+    console.log(selectedEpisode);
+});
+
 Template.episode.events({
   "click .episode, touchend .episode": function(e, t) {
     if (Session.get("dragging")) {
