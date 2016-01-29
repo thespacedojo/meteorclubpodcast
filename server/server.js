@@ -6,11 +6,14 @@ Meteor.methods({
   },
 
   getEpisodes: function(podcastId) {
+    check(podcastId, Number);
     return Meteor.http.call('get', 'https://api.simplecast.fm/v1/podcasts/' +
         podcastId + '/episodes.json?api_key=' + Meteor.settings.simplecastKey).data;
   },
 
   getEmbed: function(podcastId, episodeId) {
+    check(podcastId, Number);
+    check(episodeId, Number);    
     return Meteor.http.call('get', 'https://api.simplecast.fm/v1/podcasts/' +
         podcastId + '/episodes/' + episodeId + '/embed.json?api_key=' +
         Meteor.settings.simplecastKey).data.html.dark;
@@ -30,6 +33,7 @@ Meteor.methods({
         player: Meteor.call('getEmbed', podcastId, episode.id),
         download: episode.audio_url,
         showNotes: episode.long_description,
+        slug: getSlug(episode.title),
       }});
     });
   }
